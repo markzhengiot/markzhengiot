@@ -1,0 +1,1637 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Ko - VP Global Product Sales &amp; Business Development | Eelink IoT Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0f4c75 0%, #3282b8 50%, #bbe1fa 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #3282b8;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(15, 76, 117, 0.95), rgba(50, 130, 184, 0.9));
+            color: white;
+            padding: 140px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+            animation: float 25s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-15px) translateX(10px); }
+            66% { transform: translateY(10px) translateX(-5px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #fff, #bbe1fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+
+        .hero-company {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .hero-stat {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-stat h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-stat p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            font-size: 1.1rem;
+        }
+
+        .cta-primary {
+            background: white;
+            color: #0f4c75;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main Content */
+        main {
+            background: white;
+            margin-top: -60px;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #0f4c75, #3282b8);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #0f4c75, #3282b8, #bbe1fa);
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .profile-title {
+            font-size: 1.3rem;
+            color: #0f4c75;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .profile-experience {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .about-content h3 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            margin-bottom: 2rem;
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .achievement-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0f4c75;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-label {
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Products Section */
+        .products-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #0f4c75, #3282b8, #bbe1fa);
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-icon {
+            /* Increase the product image container size for better visibility */
+            width: 160px;
+            height: 160px;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .product-card h4 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .product-features li {
+            padding: 0.8rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1rem;
+            line-length: 1.6;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #3282b8;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-specs {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .product-specs h5 {
+            color: #0f4c75;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding: 3rem 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #0f4c75, #3282b8, #bbe1fa);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 4rem;
+            position: relative;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-year {
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-content h4 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .timeline-content h5 {
+            font-size: 1.2rem;
+            color: #0f4c75;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Expertise Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .expertise-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .expertise-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .expertise-card h4 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .expertise-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Articles Section */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #0f4c75, #3282b8, #bbe1fa);
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .article-content h4 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .article-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .article-platform,
+        .article-category {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .article-platform {
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            color: white;
+        }
+
+        .article-category {
+            background: #f8f9fa;
+            color: #666;
+            border: 1px solid #e9ecef;
+        }
+
+        .article-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0f4c75;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .article-link:hover {
+            color: #3282b8;
+            transform: translateX(5px);
+        }
+
+        .article-link .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .article-link:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .articles-cta {
+            margin-top: 5rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 4rem 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .articles-cta h3 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .articles-cta p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .articles-cta .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .articles-cta .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+        }
+
+        .articles-cta .cta-primary {
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            color: white;
+        }
+
+        .articles-cta .cta-secondary {
+            background: white;
+            color: #0f4c75;
+            border: 2px solid #0f4c75;
+        }
+
+        .articles-cta .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #0f4c75 0%, #3282b8 50%, #bbe1fa 100%);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .contact-card p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 4rem 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .newsletter h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .newsletter p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-btn {
+            background: white;
+            color: #0f4c75;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #bbe1fa;
+            font-weight: 700;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .footer-section a:hover {
+            color: #3282b8;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 80px;
+            }
+
+            .timeline-year {
+                position: absolute;
+                left: 0;
+                transform: none;
+                width: 60px;
+                height: 60px;
+                font-size: 0.9rem;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .expertise-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #3282b8, #0f4c75);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html#" class="logo">Apple Ko</a>
+            <button style="display: none; background: none; border: none; font-size: 1.5rem; color: rgb(51, 51, 51); cursor: pointer;">☰</button><ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#expertise">Expertise</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="https://blog.appleko.io">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Apple Ko</h1>
+                <p class="hero-subtitle">VP Global Product Sales &amp; Business Development</p>
+                <p class="hero-company">Eelink Communication Technology Co., Ltd.</p>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <h3>10+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>166+</h3>
+                        <p>Countries Served</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>500K+</h3>
+                        <p>Devices Monthly</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>1000+</h3>
+                        <p>Global Clients</p>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="cta-button cta-primary">Get In Touch</a>
+                    <a href="index.html#about" class="cta-button cta-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Leading IoT Innovation</h2>
+                <p class="section-subtitle">Over a decade of specialized experience driving global expansion in GPS technology sales across North American, Australian, and European markets</p>
+                
+                <div class="about-grid">
+                    <div class="profile-card">
+                        <!-- Profile image replaced with actual photo -->
+                        <div class="profile-image"><img src="avatar.jpg" alt="Apple Ko" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+                        <h3 class="profile-name">Apple Ko</h3>
+                        <p class="profile-title">VP Global Product Sales &amp; Business Development</p>
+                        <p class="profile-experience">10+ Years IoT Industry Leadership</p>
+                    </div>
+                    <div class="about-content">
+                        <h3>Transforming Global Supply Chain Technology</h3>
+                        <p>Apple Ko stands as a pivotal figure in the global IoT and GPS tracking industry, with over a decade of specialized experience in GPS technology sales. She has established herself as a key driver of international expansion for one of China's leading IoT device manufacturers.</p>
+                        <p>Her leadership comes at a critical time when the IoT tracking market is experiencing rapid growth, projected to reach $10.2 billion by 2033 with a 12.7% CAGR. Ko's strategic positioning has helped Eelink maintain its status as a top-tier manufacturer in the highly competitive GPS tracking sector.</p>
+                        <p>As a bilingual professional, she effectively bridges cultural and technical gaps between Eelink's advanced manufacturing capabilities and diverse global market demands, focusing on supply chain and cold chain monitoring technologies where her expertise has proven invaluable.</p>
+                    </div>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card fade-in">
+                        <div class="achievement-icon">🌍</div>
+                        <span class="achievement-number">166+</span>
+                        <span class="achievement-label">Countries Reached</span>
+                    </div>
+                    <div class="achievement-card fade-in">
+                        <div class="achievement-icon">🏭</div>
+                        <span class="achievement-number">500K+</span>
+                        <span class="achievement-label">Monthly Production</span>
+                    </div>
+                    <div class="achievement-card fade-in">
+                        <div class="achievement-icon">👥</div>
+                        <span class="achievement-number">50+</span>
+                        <span class="achievement-label">Engineering Team</span>
+                    </div>
+                    <div class="achievement-card fade-in">
+                        <div class="achievement-icon">⏰</div>
+                        <span class="achievement-number">24/7</span>
+                        <span class="achievement-label">Global Monitoring</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="section products-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Flagship Product Innovations</h2>
+                <p class="section-subtitle">Leading the development of cutting-edge IoT tracking solutions that revolutionize supply chain visibility and asset management</p>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <!-- Replace emoji with real product image for GPT50 -->
+                        <div class="product-icon"><img src="gpt50_assets/Front-view.jpg" alt="GPT50 Ultra-Long GPS Tracker" style="width:100%; height:100%; object-fit:cover; border-radius:25px;"></div>
+                        <h4>GPT50 Ultra-Long GPS Tracker</h4>
+                        <p class="product-description">Revolutionary breakthrough in long-term asset tracking with unprecedented 10-year battery life. Built with 24,000 mAh lithium battery and power-optimized electronics for global deployment.</p>
+                        <ul class="product-features">
+                            <li>Up to 10 years battery life with daily updates</li>
+                            <li>Global GNSS positioning (GPS, GLONASS, BeiDou, Galileo)</li>
+                            <li>4G LTE Cat-1 connectivity with 2G fallback</li>
+                            <li>IPX7 waterproof and rugged design</li>
+                            <li>Motion-triggered tamper alerts and light sensors</li>
+                            <li>Emergency mode for real-time tracking</li>
+                        </ul>
+                        <div class="product-specs">
+                            <h5>Technical Specifications</h5>
+                            <p>Dimensions: 130×103×30 mm | Weight: 410 g | Operating Temperature: –40 °C to +85 °C</p>
+                        </div>
+                        <!-- Link to detailed product page -->
+                        <div style="margin-top:1rem;">
+                            <a href='gpt50_product' style='color:#1e3a8a;font-weight:600;text-decoration:underline;'>Learn more&nbsp;→</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <!-- Replace emoji with placeholder image representing GPT29 monitoring device -->
+                        <!-- Updated to load image from accessible folder -->
+                        <div class="product-icon"><img src="gpt29_assets/device.png" alt="GPT29 Smart Monitoring Device" style="width:100%; height:100%; object-fit:cover; border-radius:25px;"></div>
+                        <h4>GPT29 Smart Monitoring</h4>
+                        <p class="product-description">Comprehensive in-transit monitoring device with multi-sensor approach for real-time shipment conditions and environmental alerts. Perfect for cold chain integrity.</p>
+                        <ul class="product-features">
+                            <li>Temperature, humidity, shock, and light sensors</li>
+                            <li>4G LTE Cat-M1, NB-IoT connectivity</li>
+                            <li>GPS, Wi-Fi, and BLE 5.0 positioning</li>
+                            <li>One-year rechargeable battery life</li>
+                            <li>Real-time condition data streaming</li>
+                            <li>Predictive analytics for spoilage prevention</li>
+                        </ul>
+                        <div class="product-specs">
+                            <h5>Applications</h5>
+                            <p>Pharmaceutical transport, food logistics, sensitive cargo monitoring, compliance tracking</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <!-- Replace emoji with placeholder image representing DB01 BLE Sensor Beacon -->
+                        <!-- Updated to load image from accessible folder -->
+                        <div class="product-icon"><img src="db01_assets/device.png" alt="DB01 BLE Sensor Beacon" style="width:100%; height:100%; object-fit:cover; border-radius:25px;"></div>
+                        <h4>DB01 BLE Sensor Beacon</h4>
+                        <p class="product-description">Compact USB-powered environmental monitoring tag with 3-year battery life and precision sensing capabilities for detailed environmental tracking.</p>
+                        <ul class="product-features">
+                            <li>Bluetooth Low Energy 5.0 technology</li>
+                            <li>Temperature accuracy ±1.0°C (-40°C to 125°C)</li>
+                            <li>3-year coin-cell battery operation</li>
+                            <li>54,000 historical records storage</li>
+                            <li>iBeacon compatible with real-time alerts</li>
+                            <li>IP65 protection rating</li>
+                        </ul>
+                        <div class="product-specs">
+                            <h5>Perfect For</h5>
+                            <p>Cold storage, pharmaceutical compliance, food safety, laboratory monitoring</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <!-- Replace emoji with placeholder image representing TK418 & TK319L Series vehicle tracker -->
+                        <!-- Updated to load image from accessible folder -->
+                        <div class="product-icon"><img src="tk418_assets/device.png" alt="TK418 & TK319L Series Vehicle Tracker" style="width:100%; height:100%; object-fit:cover; border-radius:25px;"></div>
+                        <h4>TK418 &amp; TK319L Series</h4>
+                        <p class="product-description">Advanced vehicle and asset tracking devices featuring CAT-M1/NB-IoT technology with Bluetooth 5.0 integration for comprehensive fleet management.</p>
+                        <ul class="product-features">
+                            <li>LTE Cat-M1 and NB-IoT dual connectivity</li>
+                            <li>u-Blox positioning technology</li>
+                            <li>Bluetooth 5.0 gateway functionality</li>
+                            <li>5-year battery life capability</li>
+                            <li>Over-the-air firmware updates</li>
+                            <li>Multi-positioning integration</li>
+                        </ul>
+                        <div class="product-specs">
+                            <h5>Industry Applications</h5>
+                            <p>Fleet management, construction equipment, container tracking, asset protection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">A decade of leadership driving international expansion and technological innovation in the IoT tracking industry</p>
+                
+                <div class="experience-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020-2025</div>
+                        <div class="timeline-content">
+                            <h4>VP Global Product Sales &amp; Business Development</h4>
+                            <h5>Eelink Communication Technology Co., Ltd.</h5>
+                            <p>Leading international market strategy across North America, Europe, and Asia-Pacific. Driving expansion to 166+ countries with 500,000+ monthly device production. Overseeing Fortune 500 partnerships and launching flagship products including GPT50, GPT29, and TK418 series. Instrumental in achieving company recognition as top-tier IoT manufacturer.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018-2020</div>
+                        <div class="timeline-content">
+                            <h4>International Business Development</h4>
+                            <h5>Strategic Market Expansion</h5>
+                            <p>Focused on expanding market presence across three continents with market-specific requirements including telecom certifications, regional frequency bands, and data platform integrations. Developed key partnerships and distribution networks that became foundation for current global reach.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015-2018</div>
+                        <div class="timeline-content">
+                            <h4>Technical Sales &amp; Product Development</h4>
+                            <h5>IoT Solutions Architecture</h5>
+                            <p>Built expertise in IoT hardware integration, GNSS technology, and wireless connectivity solutions. Developed deep understanding of supply chain monitoring, cold chain applications, and enterprise integration requirements that shaped product development strategies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2012-2015</div>
+                        <div class="timeline-content">
+                            <h4>Early Career &amp; Foundation</h4>
+                            <h5>GPS Technology &amp; International Trade</h5>
+                            <p>Established foundation in GPS technology sales and international business operations. Gained bilingual communication skills and cultural competency essential for bridging Eastern manufacturing excellence with Western market demands.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Core Expertise</h2>
+                <p class="section-subtitle">Deep technical knowledge combined with strategic business acumen across the full IoT ecosystem</p>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🔧</div>
+                        <h4>IoT Hardware &amp; Integration</h4>
+                        <p>Extensive experience in design and OEM/ODM development of tracking devices. Expert in power optimization, sensor integration, and rugged enclosures for harsh environments. Oversees projects from concept to mass production with client-specific customizations.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">📶</div>
+                        <h4>GNSS &amp; Wireless Connectivity</h4>
+                        <p>Expertise in multi-constellation GNSS technology and wireless protocols including 4G LTE, Cat-M1, NB-IoT, BLE 5.0, and Wi-Fi. Specializes in ensuring global coverage and network redundancy for mission-critical applications.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">❄️</div>
+                        <h4>Supply Chain &amp; Cold Chain Monitoring</h4>
+                        <p>Deep domain expertise in logistics, fleet management, and temperature-controlled shipping. Designs solutions for pharmaceutical, food, and sensitive cargo tracking with real-time alerts and compliance reporting.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🤖</div>
+                        <h4>Data Analytics &amp; AI in IoT</h4>
+                        <p>Knowledge in machine learning for anomaly detection and predictive analytics. Promotes AIoT trends including edge computing, automated decision-making, and integration with enterprise systems for actionable insights.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🌐</div>
+                        <h4>International Business Development</h4>
+                        <p>Bilingual expertise in global market penetration, international negotiations, and cultural bridge-building. Proven track record in expanding technology companies across North America, Europe, and Asia-Pacific markets.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🎓</div>
+                        <h4>Client Consulting &amp; Training</h4>
+                        <p>Translates technical features into business value through strategic consulting. Leads training for global sales teams and provides ROI analysis, deployment strategies, and system integration guidance for enterprise clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles Section -->
+        <section id="articles" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Latest Articles &amp; Insights</h2>
+                <p class="section-subtitle">I write and share insights about IoT and logistics industry across different channels, providing valuable perspectives on supply chain innovation and technology trends</p>
+                
+                <div class="articles-grid">
+                    <!-- Apple Ko & EELink thought leadership article published on Medium -->
+                    <div class="article-card">
+                        <div class="article-icon">📝</div>
+                        <div class="article-content">
+                            <h4>Apple Ko &amp; EELink: Innovating IoT Asset Management</h4>
+                            <p class="article-description">An in‑depth look at Apple Ko’s vision for IoT asset management, EELink’s diverse product portfolio and the future of connected assets.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Medium</span>
+                                <span class="article-category">Thought Leadership</span>
+                            </div>
+                            <a href="https://medium.com/@applekoiot/ultra-long-standby-gps-trackers-asset-management-innovation-in-the-iot-era-e862cf7f2141" target="_blank" class="article-link">
+                                Read Article <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Ultra‑Long Standby GPS article hosted on personal site -->
+                    <div class="article-card">
+                        <div class="article-icon">🔋</div>
+                        <div class="article-content">
+                            <h4>Ultra‑Long Standby GPS Trackers</h4>
+                            <p class="article-description">Discover how ultra‑long battery life GPS devices and LPWA networks revolutionize asset tracking across logistics, cold chain, fleet management and more.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Website</span>
+                                <span class="article-category">IoT Insights</span>
+                            </div>
+                            <a class='article-link' href='ultra_long_gps' target='_blank'>
+                                Read Article <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Building resilient supply chains article hosted on personal site -->
+                    <div class="article-card">
+                        <div class="article-icon">🌐</div>
+                        <div class="article-content">
+                            <h4>Building Resilient Supply Chains with IoT</h4>
+                            <p class="article-description">An exploration of low‑power connectivity, LTE‑M and NB‑IoT technologies, and how Apple Ko and EELink’s devices enable intelligent logistics.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Website</span>
+                                <span class="article-category">IoT Insights</span>
+                            </div>
+                            <a class='article-link' href='iot_article' target='_blank'>
+                                Read Article <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- GPT50 low‑maintenance tracker article hosted on personal site -->
+                    <div class="article-card">
+                        <div class="article-icon">⚙️</div>
+                        <div class="article-content">
+                            <h4>Why GPT50 Is the Most Low‑Maintenance Tracker for Asset Managers</h4>
+                            <p class="article-description">Explore the engineering behind GPT50’s 10-year battery, multi-network connectivity and intelligent sensor alarms that make it an ideal low-maintenance tracking solution.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Website</span>
+                                <span class="article-category">Technical Insights</span>
+                            </div>
+                            <a class='article-link' href='gpt50_article' target='_blank'>
+                                Read Article <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-icon">📧</div>
+                        <div class="article-content">
+                            <h4>Weekly Newsletter: Supply Chain &amp; IoT Observations</h4>
+                            <p class="article-description">Regular insights and analysis on emerging trends in supply chain technology, IoT innovations, and market developments affecting global logistics operations.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Substack</span>
+                                <span class="article-category">Weekly Insights</span>
+                            </div>
+                            <a href="https://applekoiot.substack.com/p/why-8yearbattery-gps-trackers-are" target="_blank" class="article-link">
+                                Subscribe &amp; Read <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-icon">💼</div>
+                        <div class="article-content">
+                            <h4>LinkedIn Articles &amp; Case Studies</h4>
+                            <p class="article-description">Professional insights, industry case studies, and thought leadership content focusing on IoT implementation strategies and real-world supply chain solutions.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">LinkedIn</span>
+                                <span class="article-category">Professional Content</span>
+                            </div>
+                            <a href="https://www.linkedin.com/in/apple-ko/" target="_blank" class="article-link">
+                                Follow &amp; Connect <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articles-cta">
+                    <div class="cta-content">
+                        <h3>Stay Updated with Latest Insights</h3>
+                        <p>Get exclusive access to my latest articles, industry analysis, and practical IoT implementation guides delivered directly to your inbox.</p>
+                        <div class="cta-buttons">
+                            <a href="https://applekoiot.substack.com/" target="_blank" class="cta-button cta-primary">Subscribe to Newsletter</a>
+                            <a href="https://www.linkedin.com/in/apple-ko/" target="_blank" class="cta-button cta-secondary">Follow on LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section fade-in">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Connect with Apple Ko</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Ready to leverage cutting-edge IoT tracking for your organization? Let's discuss how smart sensors and GPS devices can solve your business challenges.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email</h4>
+                        <p>Direct business inquiries and collaboration opportunities</p>
+                        <a href="mailto:apple@eelinktech.com">apple@eelinktech.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📱</div>
+                        <h4>Phone</h4>
+                        <p>For urgent consultations and international partnerships</p>
+                        <a href="tel:+8615889393211">+86 158 8939 3211</a>
+                    </div>
+                    <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                        <h4>LinkedIn</h4>
+                        <p>Professional networking and industry insights</p>
+                        <a href="https://linkedin.com/in/apple-ko" target="_blank">Connect on LinkedIn</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📅</div>
+                        <h4>Schedule Meeting</h4>
+                        <p>Book a consultation for your IoT tracking needs</p>
+                        <a href="index.html#" onclick="alert('Contact via LinkedIn or email to schedule')">Book Consultation</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="newsletter">
+                    <h3>IoT Industry Insights Newsletter</h3>
+                    <p>Subscribe to receive industry analysis, implementation tips, case studies, and exclusive invites to webinars and events.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! You will receive our latest insights.');">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Eelink</h4>
+                    <a href="index.html#">Company History</a>
+                    <a href="index.html#">Leadership Team</a>
+                    <a href="index.html#">Global Presence</a>
+                    <a href="index.html#">Certifications</a>
+                    <a href="index.html#">Manufacturing</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Products &amp; Solutions</h4>
+                    <a href="index.html#">GPS Trackers</a>
+                    <a href="index.html#">IoT Sensors</a>
+                    <a href="index.html#">Cold Chain Solutions</a>
+                    <a href="index.html#">Fleet Management</a>
+                    <a href="index.html#">Asset Tracking</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="index.html#">White Papers</a>
+                    <a href="index.html#">Case Studies</a>
+                    <a href="index.html#">Technical Documentation</a>
+                    <a href="index.html#">API Documentation</a>
+                    <a href="index.html#">Integration Guides</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support &amp; Services</h4>
+                    <a href="index.html#">Technical Support</a>
+                    <a href="index.html#">Training Programs</a>
+                    <a href="index.html#">Distributor Program</a>
+                    <a href="index.html#">OEM/ODM Services</a>
+                    <a href="index.html#">Warranty</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Industry Focus</h4>
+                    <a href="index.html#">Logistics &amp; Transportation</a>
+                    <a href="index.html#">Cold Chain Management</a>
+                    <a href="index.html#">Construction &amp; Equipment</a>
+                    <a href="index.html#">Healthcare &amp; Pharma</a>
+                    <a href="index.html#">Agriculture</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Apple Ko - Eelink Communication Technology Co., Ltd. All rights reserved. | Shenzhen, China | Serving 166+ Countries Worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Counter animation for achievement numbers
+        function animateCounters() {
+            const counters = document.querySelectorAll('.achievement-number');
+            counters.forEach(counter => {
+                const target = counter.innerText;
+                const numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
+                const suffix = target.replace(/[0-9]/g, '');
+                let current = 0;
+                const increment = numericTarget / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= numericTarget) {
+                        counter.innerText = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.innerText = Math.floor(current) + suffix;
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation when section comes into view
+        const achievementSection = document.querySelector('.achievements-grid');
+        if (achievementSection) {
+            const achievementObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        achievementObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            achievementObserver.observe(achievementSection);
+        }
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const navLinks = document.querySelector('.nav-links');
+        const logo = document.querySelector('.logo');
+        
+        // Create mobile menu button
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.innerHTML = '☰';
+        mobileMenuBtn.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        `;
+        
+        logo.parentNode.insertBefore(mobileMenuBtn, navLinks);
+        
+        // Show mobile menu button on small screens
+        function checkScreenSize() {
+            if (window.innerWidth <= 768) {
+                mobileMenuBtn.style.display = 'block';
+            } else {
+                mobileMenuBtn.style.display = 'none';
+            }
+        }
+        
+        window.addEventListener('resize', checkScreenSize);
+        checkScreenSize();
+        
+        // Mobile menu toggle functionality
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.cssText += `
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background: white;
+                    flex-direction: column;
+                    padding: 1rem;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                `;
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                if (window.innerWidth <= 768) {
+                    navLinks.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>

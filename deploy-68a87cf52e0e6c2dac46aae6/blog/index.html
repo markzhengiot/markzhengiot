@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights &amp; Articles | Apple Ko</title>
+    <meta name="description" content="Explore thought‑leadership articles from Apple Ko on IoT tracking, asset monitoring and supply‑chain visibility.">
+    <link rel="canonical" href="https://appleko.io/blog/">
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Apple Ko Blog – Insights &amp; Articles">
+    <meta property="og:description" content="Latest articles and innovation insights on IoT tracking, asset trackers, cold chain logistics and supply chain management.">
+    <meta property="og:url" content="https://appleko.io/blog/">
+    <meta property="og:site_name" content="Apple Ko">
+    <meta property="og:image" content="../gpt50_assets/front-view.jpg">
+    <meta property="og:image:alt" content="Apple Ko — IoT &amp; GPS Tracking Solutions">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apple Ko Blog – Insights &amp; Articles">
+    <meta name="twitter:description" content="Explore thought‑leadership on IoT tracking, asset monitoring and supply‑chain visibility from Apple Ko.">
+    <meta name="twitter:image" content="../gpt50_assets/front-view.jpg">
+    <style>
+        :root {
+            --primary: #0f4c75;
+            --secondary: #3282b8;
+            --accent: #bbe1fa;
+            --dark: #0d2a46;
+            --light: #f8f9fa;
+            --border: rgba(0,0,0,0.1);
+            --max-width: 1200px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark);
+            background: var(--light);
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        nav a {
+            position: relative;
+            font-weight: 500;
+            color: var(--dark);
+            transition: color 0.2s ease;
+        }
+        nav a:hover {
+            color: var(--secondary);
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        /* Main Section */
+        main {
+            max-width: var(--max-width);
+            margin: -80px auto 0;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 4rem 2rem 6rem;
+            position: relative;
+            z-index: 10;
+        }
+        /* Featured */
+        .featured {
+            margin-bottom: 4rem;
+        }
+        .featured-title {
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .featured-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 24px;
+            color: white;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+        .featured-card .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(6px);
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        .featured-card h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        .featured-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        .featured-meta {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.85);
+        }
+        /* Filter Tabs */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: var(--light);
+            color: var(--dark);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        /* Posts Grid */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
+            gap: 2rem;
+        }
+        .post-card {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        .post-thumb {
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+        .post-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .post-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .post-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            line-height: 1.4;
+        }
+        .post-meta {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        .post-excerpt {
+            flex: 1;
+            font-size: 0.95rem;
+            color: #495057;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 500;
+        }
+        .read-more {
+            font-weight: 600;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .read-more:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.9);
+            padding: 4rem 0;
+        }
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+        .footer-column h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .footer-column a {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.8);
+            transition: color 0.2s;
+        }
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+            .featured-card {
+                padding: 1.5rem;
+            }
+            .post-card {
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Apple Ko</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#products">Products</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#expertise">Expertise</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="https://blog.appleko.io" target="_blank" rel="noopener">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Insights &amp; Articles</h1>
+        <p>Thought‑leadership from Apple Ko on IoT devices, asset tracking and supply‑chain innovation.</p>
+    </section>
+    <main>
+        <!-- Featured post section -->
+        <div class="featured" id="featuredContainer">
+            <!-- Feature will load here via script -->
+        </div>
+        <!-- Filter tabs -->
+        <div class="filters" id="filterTabs">
+            <!-- Buttons will load here -->
+        </div>
+        <!-- Posts grid -->
+        <div class="posts-grid" id="postsGrid">
+            <!-- Posts will render here -->
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About Apple Ko</h4>
+                <a href="../index.html#about">Who We Are</a>
+                <a href="../index.html#experience">Experience</a>
+                <a href="../index.html#expertise">Expertise</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h4>Products</h4>
+                <a href="../index.html#products">IoT Trackers</a>
+                <a href="../index.html#products">Asset Monitoring</a>
+                <a href="../index.html#products">Cold Chain Solutions</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="../index.html#">Case Studies</a>
+                <a href="../index.html#">White Papers</a>
+                <a href="../index.html#">Documentation</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:apple@eelinktech.com">Email: apple@eelinktech.com</a>
+                <a href="tel:+8615889393211">Phone: +86 158 8939 3211</a>
+                <a href="https://linkedin.com/in/apple-ko" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Apple Ko – Eelink Communication Technology Co., Ltd. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        // Blog data loaded from posts.json
+        let posts = [];
+        fetch('posts.json')
+            .then(res => res.json())
+            .then(data => {
+                posts = data.sort((a,b) => new Date(b.date) - new Date(a.date));
+                renderFeatured(posts);
+                renderFilters(posts);
+                renderPosts(posts);
+            })
+            .catch(err => console.error(err));
+        // Render featured article (first in list)
+        function renderFeatured(posts) {
+            if(!posts.length) return;
+            const feature = posts[0];
+            const cont = document.getElementById('featuredContainer');
+            const html = `
+                <h3 class="featured-title">Featured Article</h3>
+                <div class="featured-card" onclick="window.location.href='${feature.url}'">
+                    <span class="badge">${(feature.tags && feature.tags.length) ? feature.tags[0] : 'Featured'}</span>
+                    <h2>${feature.title}</h2>
+                    <p>${feature.excerpt}</p>
+                    <div class="featured-meta">${new Date(feature.date).toLocaleDateString('en-US', {year:'numeric', month:'short', day:'numeric'})} • ${feature.readingMinutes} min read</div>
+                </div>
+            `;
+            cont.innerHTML = html;
+        }
+        // Render filters based on unique tags
+        function renderFilters(posts) {
+            const filtersEl = document.getElementById('filterTabs');
+            const tags = Array.from(new Set(posts.flatMap(p => p.tags || [])));
+            const allBtn = document.createElement('button');
+            allBtn.textContent = 'All';
+            allBtn.className = 'filter-btn active';
+            allBtn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                allBtn.classList.add('active');
+                renderPosts(posts);
+            });
+            filtersEl.appendChild(allBtn);
+            tags.forEach(tag => {
+                const btn = document.createElement('button');
+                btn.textContent = tag;
+                btn.className = 'filter-btn';
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filtered = posts.filter(p => (p.tags || []).includes(tag));
+                    renderPosts(filtered);
+                });
+                filtersEl.appendChild(btn);
+            });
+        }
+        // Render posts grid
+        function renderPosts(list) {
+            const grid = document.getElementById('postsGrid');
+            grid.innerHTML = '';
+            list.slice(1).forEach(post => {
+                const card = document.createElement('div');
+                card.className = 'post-card';
+                card.innerHTML = `
+                    <div class="post-thumb">
+                        <img src="${post.cover || '../gpt50_assets/front-view.jpg'}" alt="${post.title}">
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">${post.title}</h3>
+                        <div class="post-meta">${new Date(post.date).toLocaleDateString('en-US', {year:'numeric', month:'short', day:'numeric'})} • ${post.readingMinutes} min read</div>
+                        <p class="post-excerpt">${post.excerpt}</p>
+                        <div class="post-tags">
+                            ${(post.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}
+                        </div>
+                        <a class="read-more" href="${post.url}">Read More →</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+    </script>
+</body>
+</html>
