@@ -1,2 +1,2 @@
-/blog/* https://blog.appleko.io/:splat 301
-/blog https://blog.appleko.io 301
+/blog/* https://https://appleko.io/blog//:splat 301
+/blog https://https://appleko.io/blog/ 301
