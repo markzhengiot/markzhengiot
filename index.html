@@ -425,16 +425,25 @@ ternate" href="https://appleko.io/" hreflang="x-default" />
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            /*
+             * Use a slightly smaller min‑width for product cards so that more
+             * items can appear per row on larger screens, similar to the
+             * showcase template. The auto‑fit behaviour remains the same.
+             */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
             margin-top: 4rem;
         }
 
         .product-card {
             background: white;
-            border-radius: 25px;
+            /* Match the card shape from the provided template: slightly
+             * smaller corner radius and hidden overflow to ensure the
+             * product images stay within the card. */
+            border-radius: 16px;
             padding: 3rem;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            /* Subtler default shadow similar to the template */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -451,8 +460,10 @@ ternate" href="https://appleko.io/" hreflang="x-default" />
         }
 
         .product-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+            /* On hover, lift the card slightly and increase the shadow,
+             * similar to the template, but keep the movement gentle. */
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
         .product-icon {
@@ -481,6 +492,10 @@ ternate" href="https://appleko.io/" hreflang="x-default" />
             margin-bottom: 2rem;
             line-height: 1.7;
             font-size: 1.1rem;
+            /* Limit the description height to maintain consistent card heights
+             * across all products. Any excess text will be hidden. */
+            height: 4.8rem;
+            overflow: hidden;
         }
 
         .product-features {
