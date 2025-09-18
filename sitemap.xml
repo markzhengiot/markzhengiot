@@ -1,38 +1,27 @@
-diff --git a/sitemap.xml b/sitemap.xml
-index 52d06911bfbada5561f0b0eadfbc04cad46bf0c2..cb9800cad20aebe468f3a89c5a5b5c1f8c844712 100644
---- a/sitemap.xml
-+++ b/sitemap.xml
-@@ -1,27 +1,33 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-     <loc>https://appleko.io/</loc>
-     <lastmod>2025-08-19</lastmod>
-     <changefreq>weekly</changefreq>
-     <priority>1.0</priority>
-   </url>
-+  <url>
-+    <loc>https://appleko.io/book-consultation.html</loc>
-+    <lastmod>2025-08-19</lastmod>
-+    <changefreq>monthly</changefreq>
-+    <priority>0.9</priority>
-+  </url>
-   <url>
-     <loc>https://appleko.io/ultra_long_gps</loc>
-     <lastmod>2025-08-19</lastmod>
-     <changefreq>monthly</changefreq>
-     <priority>0.8</priority>
-   </url>
-   <url>
-     <loc>https://appleko.io/iot_article</loc>
-     <lastmod>2025-08-19</lastmod>
-     <changefreq>monthly</changefreq>
-     <priority>0.8</priority>
-   </url>
-   <url>
-     <loc>https://appleko.io/gpt50_article</loc>
-     <lastmod>2025-08-19</lastmod>
-     <changefreq>monthly</changefreq>
-     <priority>0.8</priority>
-   </url>
- </urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://appleko.io/</loc>
+    <lastmod>2025-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://appleko.io/ultra_long_gps</loc>
+    <lastmod>2025-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://appleko.io/iot_article</loc>
+    <lastmod>2025-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://appleko.io/gpt50_article</loc>
+    <lastmod>2025-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

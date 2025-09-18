@@ -1,113 +1,1872 @@
-diff --git a/index.html b/index.html
-index 5a78a08823c914c5d259a65c12d77e0587c5ebc2..b86816a15d0136c60b36990269054b9d477d07ec 100644
---- a/index.html
-+++ b/index.html
-@@ -1111,50 +1111,51 @@ ternate" href="https://appleko.io/" hreflang="x-default" />
- 
-         ::-webkit-scrollbar-track {
-             background: #f1f1f1;
-         }
- 
-         ::-webkit-scrollbar-thumb {
-             background: linear-gradient(135deg, #0f4c75, #3282b8);
-             border-radius: 10px;
-         }
- 
-         ::-webkit-scrollbar-thumb:hover {
-             background: linear-gradient(135deg, #3282b8, #0f4c75);
-         }
-     </style>
- </head>
- <body>
-     <!-- Header -->
-     <header>
-         <nav class="container">
-             <a href="index.html" class="logo"><img src="appleko-icon-192.png" alt="AK logo" style="height:2.2rem; margin-right:0.5rem; vertical-align:middle;">Apple Ko</a>
-             <button style="display: none; background: none; border: none; font-size: 1.5rem; color: rgb(51, 51, 51); cursor: pointer;">☰</button><ul class="nav-links">
-                 <li><a href="index.html#about">About</a></li>
-                 <li><a href="index.html#products">Products</a></li>
-                 <li><a href="index.html#experience">Experience</a></li>
-                 <li><a href="index.html#expertise">Expertise</a></li>
-+                <li><a href="book-consultation.html">Book Meeting</a></li>
-                 <li><a href="index.html#contact">Contact</a></li>
-                 <!-- Added blog navigation link -->
-                 <li><a href="https://appleko.io/blog/">Blog</a></li>
-             </ul>
-         </nav>
-     </header>
- 
-     <!-- Hero Section -->
-     <section class="hero">
-         <div class="container">
-             <div class="hero-content">
-                 <h1>Apple Ko</h1>
-                 <p class="hero-subtitle">VP Global Product Sales &amp; Business Development</p>
-                 <p class="hero-company">Eelink Communication Technology Co., Ltd.</p>
-                 
-                 <div class="hero-stats">
-                     <div class="hero-stat">
-                         <h3>10+</h3>
-                         <p>Years Experience</p>
-                     </div>
-                     <div class="hero-stat">
-                         <h3>166+</h3>
-                         <p>Countries Served</p>
-                     </div>
-                     <div class="hero-stat">
-diff --git a/index.html b/index.html
-index 5a78a08823c914c5d259a65c12d77e0587c5ebc2..b86816a15d0136c60b36990269054b9d477d07ec 100644
---- a/index.html
-+++ b/index.html
-@@ -1547,51 +1548,51 @@ ternate" href="https://appleko.io/" hreflang="x-default" />
-                 <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Ready to leverage cutting-edge IoT tracking for your organization? Let's discuss how smart sensors and GPS devices can solve your business challenges.</p>
-                 
-                 <div class="contact-grid">
-                     <div class="contact-card">
-                         <div class="contact-icon">📧</div>
-                         <h4>Email</h4>
-                         <p>Direct business inquiries and collaboration opportunities</p>
-                         <a href="mailto:apple@eelinktech.com">apple@eelinktech.com</a>
-                     </div>
-                     <div class="contact-card">
-                         <div class="contact-icon">📱</div>
-                         <h4>Phone</h4>
-                         <p>For urgent consultations and international partnerships</p>
-                         <a href="tel:+8615889393211">+86 158 8939 3211</a>
-                     </div>
-                     <div class="contact-card">
-                     <div class="contact-icon">💼</div>
-                         <h4>LinkedIn</h4>
-                         <p>Professional networking and industry insights</p>
-                         <a href="https://linkedin.com/in/apple-ko" target="_blank">Connect on LinkedIn</a>
-                     </div>
-                     <div class="contact-card">
-                         <div class="contact-icon">📅</div>
-                         <h4>Schedule Meeting</h4>
-                         <p>Book a consultation for your IoT tracking needs</p>
--                        <a href="index.html#" onClick="alert('Contact via LinkedIn or email to schedule')">Book Consultation</a>
-+                        <a href="book-consultation.html">Book Consultation</a>
-                     </div>
-                 </div>
- 
-                 <!-- Newsletter -->
-                 <div class="newsletter">
-                     <h3>IoT Industry Insights Newsletter</h3>
-                     <p>Subscribe to receive industry analysis, implementation tips, case studies, and exclusive invites to webinars and events.</p>
-                     <form class="newsletter-form" onSubmit="event.preventDefault(); alert('Thank you for subscribing! You will receive our latest insights.');">
-                         <input type="email" class="newsletter-input" placeholder="Your email address" required>
-                         <button type="submit" class="newsletter-btn">Subscribe</button>
-                     </form>
-                 </div>
-             </div>
-         </section>
-     </main>
- 
-     <!-- Footer -->
-     <footer>
-         <div class="container">
-             <div class="footer-content">
-                 <div class="footer-section">
-                     <h4>About Eelink</h4>
-                     <a href="index.html#">Company History</a>
-                     <a href="index.html#">Leadership Team</a>
-                     <a href="index.html#">Global Presence</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Apple Ko – VP, Global Product Sales & Business Development | Eelink IoT Solutions</title>
+<link rel="canonical" href="https://appleko.io/" />
+<meta name="description" content="Apple Ko is VP, Global Product Sales & Business Development at Eelink. Specializes in IoT tracking devices, ultra-long-standby asset trackers, and supply-chain visibility." />
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Apple Ko" />
+<meta property="og:title" content="Apple Ko – Eelink VP | IoT & GPS Tracking" />
+<meta property="og:description" content="IoT tracking, ultra-long-standby asset trackers, cold chain & global supply-chain visibility." />
+<meta property="og:url" content="https://appleko.io/" />
+<meta property="og:image" content="https://appleko.io/gpt50_assets/front-view.jpg" />
+<meta property="og:image:alt" content="Apple Ko — IoT & GPS Tracking Solutions" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Apple Ko – Eelink VP | IoT & GPS Tracking" />
+<meta name="twitter:description" content="IoT tracking, ultra-long-standby asset trackers, cold chain & global supply-chain visibility." />
+<meta name="twitter:image" content="https://appleko.io/gpt50_assets/front-view.jpg" />
+<!-- Hreflang for English-only site -->
+<link rel="alhttps://appleko.io/blog/
+ternate" href="https://appleko.io/" hreflang="x-default" />
+<link rel="alternate" href="https://appleko.io/" hreflang="en" />
+<!-- Structured Data: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Apple Ko",
+  "jobTitle": "VP, Global Product Sales & Business Development",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Eelink Communication Technology Co., Ltd."
+  },
+  "url": "https://appleko.io/",
+  "sameAs": [
+    "https://www.linkedin.com/in/apple-ko/",
+    "https://dev.to/applekoiot",
+    "https://substack.com/@applekoiot"
+  ]
+}
+</script>
+
+    <!-- Apple Ko Brand Icons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#003366">
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0f4c75 0%, #3282b8 50%, #bbe1fa 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #3282b8;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(15, 76, 117, 0.95), rgba(50, 130, 184, 0.9));
+            color: white;
+            padding: 140px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+            animation: float 25s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-15px) translateX(10px); }
+            66% { transform: translateY(10px) translateX(-5px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #fff, #bbe1fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+
+        .hero-company {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .hero-stat {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-stat h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-stat p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            font-size: 1.1rem;
+        }
+
+        .cta-primary {
+            background: white;
+            color: #0f4c75;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main Content */
+        main {
+            background: white;
+            margin-top: -60px;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #0f4c75, #3282b8);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #0f4c75, #3282b8, #bbe1fa);
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .profile-title {
+            font-size: 1.3rem;
+            color: #0f4c75;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .profile-experience {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .about-content h3 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            margin-bottom: 2rem;
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .achievement-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0f4c75;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-label {
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Products Section */
+        .products-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #0f4c75, #3282b8, #bbe1fa);
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-icon {
+            /* Increase the product image container size for better visibility */
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .product-card h4 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .product-features li {
+            padding: 0.8rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1rem;
+            line-length: 1.6;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #3282b8;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .product-specs {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .product-specs h5 {
+            color: #0f4c75;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding: 3rem 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #0f4c75, #3282b8, #bbe1fa);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 4rem;
+            position: relative;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-year {
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-content h4 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .timeline-content h5 {
+            font-size: 1.2rem;
+            color: #0f4c75;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-content p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Expertise Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .expertise-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .expertise-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .expertise-card h4 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .expertise-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Articles Section */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #0f4c75, #3282b8, #bbe1fa);
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .article-content h4 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .article-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .article-platform,
+        .article-category {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .article-platform {
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            color: white;
+        }
+
+        .article-category {
+            background: #f8f9fa;
+            color: #666;
+            border: 1px solid #e9ecef;
+        }
+
+        .article-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0f4c75;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .article-link:hover {
+            color: #3282b8;
+            transform: translateX(5px);
+        }
+
+        .article-link .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .article-link:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .articles-cta {
+            margin-top: 5rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 4rem 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .articles-cta h3 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .articles-cta p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .articles-cta .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .articles-cta .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+        }
+
+        .articles-cta .cta-primary {
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            color: white;
+        }
+
+        .articles-cta .cta-secondary {
+            background: white;
+            color: #0f4c75;
+            border: 2px solid #0f4c75;
+        }
+
+        .articles-cta .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #0f4c75 0%, #3282b8 50%, #bbe1fa 100%);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .contact-card p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 4rem 3rem;
+            border-radius: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .newsletter h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .newsletter p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-btn {
+            background: white;
+            color: #0f4c75;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #bbe1fa;
+            font-weight: 700;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .footer-section a:hover {
+            color: #3282b8;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 80px;
+            }
+
+            .timeline-year {
+                position: absolute;
+                left: 0;
+                transform: none;
+                width: 60px;
+                height: 60px;
+                font-size: 0.9rem;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .expertise-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #0f4c75, #3282b8);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #3282b8, #0f4c75);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo"><img src="appleko-icon-192.png" alt="AK logo" style="height:2.2rem; margin-right:0.5rem; vertical-align:middle;">Apple Ko</a>
+            <button style="display: none; background: none; border: none; font-size: 1.5rem; color: rgb(51, 51, 51); cursor: pointer;">☰</button><ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#expertise">Expertise</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <!-- Added blog navigation link -->
+                <li><a href="https://appleko.io/blog/">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Apple Ko</h1>
+                <p class="hero-subtitle">VP Global Product Sales &amp; Business Development</p>
+                <p class="hero-company">Eelink Communication Technology Co., Ltd.</p>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <h3>10+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>166+</h3>
+                        <p>Countries Served</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>500K+</h3>
+                        <p>Devices Monthly</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>1000+</h3>
+                        <p>Global Clients</p>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="cta-button cta-primary">Get In Touch</a>
+                    <a href="index.html#about" class="cta-button cta-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Leading IoT Innovation</h2>
+                <p class="section-subtitle">Over a decade of specialized experience driving global expansion in GPS technology sales across North American, Australian, and European markets</p>
+                
+                <div class="about-grid">
+                    <div class="profile-card">
+                        <!-- Profile image replaced with actual photo -->
+                        <div class="profile-image"><img src="avatar.jpg" alt="Apple Ko" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+                        <h3 class="profile-name">Apple Ko</h3>
+                        <p class="profile-title">VP Global Product Sales &amp; Business Development</p>
+                        <p class="profile-experience">10+ Years IoT Industry Leadership</p>
+                    </div>
+                    <div class="about-content">
+                        <h3>Transforming Global Supply Chain Technology</h3>
+                        <p>Apple Ko stands as a pivotal figure in the global IoT and GPS tracking industry, with over a decade of specialized experience in GPS technology sales. She has established herself as a key driver of international expansion for one of China's leading IoT device manufacturers.</p>
+                        <p>Her leadership comes at a critical time when the IoT tracking market is experiencing rapid growth, projected to reach $10.2 billion by 2033 with a 12.7% CAGR. Ko's strategic positioning has helped Eelink maintain its status as a top-tier manufacturer in the highly competitive GPS tracking sector.</p>
+                        <p>As a bilingual professional, she effectively bridges cultural and technical gaps between Eelink's advanced manufacturing capabilities and diverse global market demands, focusing on supply chain and cold chain monitoring technologies where her expertise has proven invaluable.</p>
+                    </div>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card fade-in">
+                        <div class="achievement-icon">🌍</div>
+                        <span class="achievement-number">166+</span>
+                        <span class="achievement-label">Countries Reached</span>
+                    </div>
+                    <div class="achievement-card fade-in">
+                        <div class="achievement-icon">🏭</div>
+                        <span class="achievement-number">500K+</span>
+                        <span class="achievement-label">Monthly Production</span>
+                    </div>
+                    <div class="achievement-card fade-in">
+                        <div class="achievement-icon">👥</div>
+                        <span class="achievement-number">50+</span>
+                        <span class="achievement-label">Engineering Team</span>
+                    </div>
+                    <div class="achievement-card fade-in">
+                        <div class="achievement-icon">⏰</div>
+                        <span class="achievement-number">24/7</span>
+                        <span class="achievement-label">Global Monitoring</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="section products-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Flagship Product Innovations</h2>
+                <p class="section-subtitle">Leading the development of cutting-edge IoT tracking solutions that revolutionize supply chain visibility and asset management</p>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <!-- Replace emoji with real product image for GPT50 -->
+                        <div class="product-icon"><img src="gpt50_assets/Front-view.jpg" alt="GPT50 Ultra-Long GPS Tracker" style="width:100%; height:100%; object-fit:cover; border-radius:25px;"></div>
+                        <h4>GPT50 Ultra-Long GPS Tracker</h4>
+                        <!-- Updated GPT50 description to unify product specifications -->
+                        <p class="product-description">Ultra‑long GPS (GPT50): 24,000 mAh, multi‑GNSS, LTE Cat‑1 (2G fallback). Up to 10‑year standby.</p>
+                        <ul class="product-features">
+                            <li>Up to 10‑year standby with daily updates</li>
+                            <li>Global GNSS positioning (GPS, GLONASS, BeiDou, Galileo)</li>
+                            <li>4G LTE Cat-1 connectivity with 2G fallback</li>
+                            <li>IPX7 waterproof and rugged design</li>
+                            <li>Motion-triggered tamper alerts and light sensors</li>
+                            <li>Emergency mode for real-time tracking</li>
+                        </ul>
+                        <div class="product-specs">
+                            <h5>Technical Specifications</h5>
+                            <!-- Updated technical specifications: weight and temperature range -->
+                            <p>Dimensions: 130×103×30 mm | Weight: ~350 g (±10 g) | Operating Temperature: −20 °C to +60 °C</p>
+                        </div>
+                        <!-- Link to detailed product page -->
+                        <div style="margin-top:1rem;">
+                            <a href='gpt50_product' style='color:#1e3a8a;font-weight:600;text-decoration:underline;'>Learn more&nbsp;→</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <!-- Replace emoji with placeholder image representing GPT29 monitoring device -->
+                        <!-- Updated to load image from accessible folder -->
+                        <div class="product-icon"><img src="data:image/jpeg;base64,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/wCSf6J/16JQB0dFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAHmnx3/wCRItv+v9P/AEB6+fq+jvjJo9/rHgnbYW7Tta3CzyIvLbArAkDvjNfONAGp4bZU1uEswUYYcnHODXdEZBB715iCQcg4IrqdI8Txrb+VqDkMg+WQAncPfHegC2ryaDPsky9hI2Q2OYifX2rY+SWPs6OPqCDWPdeIdJntZYvOLF0IAMZ6447Vb0LP9iWv+5/U0APtNLtLKVpYUbeRtBZi20egz0FXKKKAIbq0hvIwkykgHIIYgj8RT4YY7eFYoUCIowFHan0UAFVTp1qbsXRi/eg56nGfXHTPvVrFGKAI7i4itYGmmcIijJJrKtIp9XvI9RuAYreE5t4u5/2jR4nZUtLVpPuC5Utx2wak/wCEm0ntcNj/AK5t/hQBq5A5PavOtRIOozkEEFzyDkVsa34jFyn2eyYiNh8z9CfaueoAK+qfh5/yT/RP+vRK+WYYZbiZIII2klkYKiIMliegAr6u8G6fc6V4O0qwvI/LuILZFkTOdpx0oA26KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvGfil8KwBN4g8O2/q91Zxr+boP5j8RXs1FAHxnRXtnxI+Ect9dHV/C9upllbNxZghAT/fTOAPcfiK4H/hVPjj/oAyf9/wCL/wCKoA5GnrPMoCrK4A6AMa6v/hVPjj/oAyf9/wCL/wCKo/4VT44/6AMn/f8Ai/8AiqAOV+0z/wDPaT/vo0faZ/8AntJ/30a6r/hVPjj/AKAMn/f+L/4qj/hVPjj/AKAMn/f+L/4qgDlftM//AD2k/wC+jR9pn/57Sf8AfRrqv+FU+OP+gDJ/3/i/+Ko/4VT44/6AMn/f+L/4qgDlftM//PaT/vo0faZ/+e0n/fRrqv8AhVPjj/oAyf8Af+L/AOKo/wCFU+OP+gDJ/wB/4v8A4qgDk3lkkGHkZh6E5ptdd/wqnxx/0AZP+/8AF/8AFUf8Kp8cf9AGT/v/ABf/ABVAHI0+CCW5njggjaWWRgqIgyWJ6ACur/4VT44/6AMn/f8Ai/8Aiq9Z+Gnwyi8LQrqmqokuryLwOGW2B7D/AGvU/gPcAT4Z/DKHwxAmq6tGkurSDKqeRbD0H+16n8B7+jUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//Z" alt="GPT29 Smart Monitoring Device" style="width:100%; height:100%; object-fit:cover; border-radius:25px;"></div>
+                        <h4>GPT29 Smart Monitoring</h4>
+                        <p class="product-description">Comprehensive in-transit monitoring device with multi-sensor approach for real-time shipment conditions and environmental alerts. Perfect for cold chain integrity.</p>
+                        <ul class="product-features">
+                            <li>Temperature, humidity, shock, and light sensors</li>
+                            <li>4G LTE Cat-M1, NB-IoT connectivity</li>
+                            <li>GPS, Wi-Fi, and BLE 5.0 positioning</li>
+                            <li>One-year rechargeable battery life</li>
+                            <li>Real-time condition data streaming</li>
+                            <li>Predictive analytics for spoilage prevention</li>
+                        </ul>
+                        <div class="product-specs">
+                            <h5>Applications</h5>
+                            <p>Pharmaceutical transport, food logistics, sensitive cargo monitoring, compliance tracking</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <!-- Replace emoji with placeholder image representing DB01 BLE Sensor Beacon -->
+                        <!-- Updated to load image from accessible folder -->
+                        <div class="product-icon"><img src="data:image/jpeg;base64,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KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAIJrSC4B8yME/3h1rEu7aSyfDfMh+63Y10VQXkBubWSFSFLDAJGcUAYCzfMAWwcfdoa7SOS3idJN87FV2qWCkDPJHQcdajnsr+0z5kBdf70fzD/ABqgZyZYdly8SxMS8YAPmDGMEnkc8/hSGXV1nTWi80XsWz7QbYMTjMucbPrmlfVbRVuijvM1o4SZIkLMrHGBgdeorOaS9MSjzrR3+0byXhOBHnoAP48d6dLLcutyv27yRIwMLxRgNGOM5zwen5UAa7yY3ZOBjhs0wylsbSCD78mqaSyTvm3ikkJ4+UE1q6Zp14tytxOixqP4WOT/APWoAtWOnYxLcDJ7Ie31rSwB0oopiCloooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBKjltbecYmgjk/3lBqWigCidG01jk2UP4LipI9MsYvuWkI99gq1RQAiqFGFAAHYUtFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9k=" alt="DB01 BLE Sensor Beacon" style="width:100%; height:100%; object-fit:cover; border-radius:25px;"></div>
+                        <h4>DB01 BLE Sensor Beacon</h4>
+                        <p class="product-description">Compact USB-powered environmental monitoring tag with 3-year battery life and precision sensing capabilities for detailed environmental tracking.</p>
+                        <ul class="product-features">
+                            <li>Bluetooth Low Energy 5.0 technology</li>
+                            <li>Temperature accuracy ±1.0°C (-40°C to 125°C)</li>
+                            <li>3-year coin-cell battery operation</li>
+                            <li>54,000 historical records storage</li>
+                            <li>iBeacon compatible with real-time alerts</li>
+                            <li>IP65 protection rating</li>
+                        </ul>
+                        <div class="product-specs">
+                            <h5>Perfect For</h5>
+                            <p>Cold storage, pharmaceutical compliance, food safety, laboratory monitoring</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <!-- Replace emoji with placeholder image representing TK418 & TK319L Series vehicle tracker -->
+                        <!-- Updated to load image from accessible folder -->
+                        <div class="product-icon"><img src="data:image/jpeg;base64,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AmTT7ljl7Rxm3mP+7/CfcVnWPia4sUubMXJsLu2yJIJCJYxjurfXt1571cKcKnvU3936oiVVWalv2ev3ML7xlqcviCR7aYRrax+U0aYIZicnIPer9j8Rrls+fZxyBTgkEof6iuNY3730l6zQXaXbl7hVQKwJ6lSOtZG7W7U3DJFNcW8EmxpfLLAemSOnGK7oxsrM4W7u56XqfxDmWWFtOgVUAPmJOucn2INW9N+IIupY4bnTJFkdgoMLhgSfY4NeTxavPJ99FJzxtrrfC1rqV7rcEcdpJbyxFZWeWMqAmRkjPXg8U2kI9eoooqACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK5fxb4Vj1eA3NuClynzZXg59R7/wA66iik1cuE3B3R4lrPijVLG2/s5lCXnKNNGeXX2HY+prl44vlzKd7t97Pauh8YvcyeIbuU/u2Mz5jdenPH6YrHjtvtELshIZRyv976GqhCMdkE5OTuQRzy6fLHcQy5AYggnII9DXR6Nqd3qOvW0Wm+bDcSnBdGIKj3x1HfBrn7SyuNQmCN5m0EJnb8xPZcdya9r8KeE7HR7O0umsUg1BYtrsGJIzk49O9U2QQX3w28PX2XMMkE7cvJA+3c3c7eRzU3hfwjP4aupSNbury0ZNsdvN0jOevWumzRUXAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAMXVvCOia1c/ab203TYwXVypP1wawtR+GtiISdIla3k/uSsWVvx6iu3op3A5fwr4QTR1W7vdst7jC45WEHsPU+prqKKKQBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z" alt="TK418 & TK319L Series Vehicle Tracker" style="width:100%; height:100%; object-fit:cover; border-radius:25px;"></div>
+                        <h4>TK418 &amp; TK319L Series</h4>
+                        <p class="product-description">Advanced vehicle and asset tracking devices featuring CAT-M1/NB-IoT technology with Bluetooth 5.0 integration for comprehensive fleet management.</p>
+                        <ul class="product-features">
+                            <li>LTE Cat-M1 and NB-IoT dual connectivity</li>
+                            <li>u-Blox positioning technology</li>
+                            <li>Bluetooth 5.0 gateway functionality</li>
+                            <li>5-year battery life capability</li>
+                            <li>Over-the-air firmware updates</li>
+                            <li>Multi-positioning integration</li>
+                        </ul>
+                        <div class="product-specs">
+                            <h5>Industry Applications</h5>
+                            <p>Fleet management, construction equipment, container tracking, asset protection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">A decade of leadership driving international expansion and technological innovation in the IoT tracking industry</p>
+                
+                <div class="experience-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020-2025</div>
+                        <div class="timeline-content">
+                            <h4>VP Global Product Sales &amp; Business Development</h4>
+                            <h5>Eelink Communication Technology Co., Ltd.</h5>
+                            <p>Leading international market strategy across North America, Europe, and Asia-Pacific. Driving expansion to 166+ countries with 500,000+ monthly device production. Overseeing Fortune 500 partnerships and launching flagship products including GPT50, GPT29, and TK418 series. Instrumental in achieving company recognition as top-tier IoT manufacturer.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018-2020</div>
+                        <div class="timeline-content">
+                            <h4>International Business Development</h4>
+                            <h5>Strategic Market Expansion</h5>
+                            <p>Focused on expanding market presence across three continents with market-specific requirements including telecom certifications, regional frequency bands, and data platform integrations. Developed key partnerships and distribution networks that became foundation for current global reach.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015-2018</div>
+                        <div class="timeline-content">
+                            <h4>Technical Sales &amp; Product Development</h4>
+                            <h5>IoT Solutions Architecture</h5>
+                            <p>Built expertise in IoT hardware integration, GNSS technology, and wireless connectivity solutions. Developed deep understanding of supply chain monitoring, cold chain applications, and enterprise integration requirements that shaped product development strategies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2012-2015</div>
+                        <div class="timeline-content">
+                            <h4>Early Career &amp; Foundation</h4>
+                            <h5>GPS Technology &amp; International Trade</h5>
+                            <p>Established foundation in GPS technology sales and international business operations. Gained bilingual communication skills and cultural competency essential for bridging Eastern manufacturing excellence with Western market demands.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Core Expertise</h2>
+                <p class="section-subtitle">Deep technical knowledge combined with strategic business acumen across the full IoT ecosystem</p>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🔧</div>
+                        <h4>IoT Hardware &amp; Integration</h4>
+                        <p>Extensive experience in design and OEM/ODM development of tracking devices. Expert in power optimization, sensor integration, and rugged enclosures for harsh environments. Oversees projects from concept to mass production with client-specific customizations.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">📶</div>
+                        <h4>GNSS &amp; Wireless Connectivity</h4>
+                        <p>Expertise in multi-constellation GNSS technology and wireless protocols including 4G LTE, Cat-M1, NB-IoT, BLE 5.0, and Wi-Fi. Specializes in ensuring global coverage and network redundancy for mission-critical applications.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">❄️</div>
+                        <h4>Supply Chain &amp; Cold Chain Monitoring</h4>
+                        <p>Deep domain expertise in logistics, fleet management, and temperature-controlled shipping. Designs solutions for pharmaceutical, food, and sensitive cargo tracking with real-time alerts and compliance reporting.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🤖</div>
+                        <h4>Data Analytics &amp; AI in IoT</h4>
+                        <p>Knowledge in machine learning for anomaly detection and predictive analytics. Promotes AIoT trends including edge computing, automated decision-making, and integration with enterprise systems for actionable insights.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🌐</div>
+                        <h4>International Business Development</h4>
+                        <p>Bilingual expertise in global market penetration, international negotiations, and cultural bridge-building. Proven track record in expanding technology companies across North America, Europe, and Asia-Pacific markets.</p>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🎓</div>
+                        <h4>Client Consulting &amp; Training</h4>
+                        <p>Translates technical features into business value through strategic consulting. Leads training for global sales teams and provides ROI analysis, deployment strategies, and system integration guidance for enterprise clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles Section -->
+        <section id="articles" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Latest Articles &amp; Insights</h2>
+                <p class="section-subtitle">I write and share insights about IoT and logistics industry across different channels, providing valuable perspectives on supply chain innovation and technology trends</p>
+                
+                <div class="articles-grid">
+                    <!-- Apple Ko & EELink thought leadership article published on Medium -->
+                    <div class="article-card">
+                        <div class="article-icon">📝</div>
+                        <div class="article-content">
+                            <h4>Apple Ko &amp; EELink: Innovating IoT Asset Management</h4>
+                            <p class="article-description">An in‑depth look at Apple Ko’s vision for IoT asset management, EELink’s diverse product portfolio and the future of connected assets.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Medium</span>
+                                <span class="article-category">Thought Leadership</span>
+                            </div>
+                            <a href="https://medium.com/@applekoiot/ultra-long-standby-gps-trackers-asset-management-innovation-in-the-iot-era-e862cf7f2141" target="_blank" class="article-link">
+                                Read Article <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Ultra‑Long Standby GPS article hosted on personal site -->
+                    <div class="article-card">
+                        <div class="article-icon">🔋</div>
+                        <div class="article-content">
+                            <h4>Ultra‑Long Standby GPS Trackers</h4>
+                            <p class="article-description">Discover how ultra‑long battery life GPS devices and LPWA networks revolutionize asset tracking across logistics, cold chain, fleet management and more.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Website</span>
+                                <span class="article-category">IoT Insights</span>
+                            </div>
+                            <a class='article-link' href='ultra_long_gps' target='_blank'>
+                                Read Article <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Building resilient supply chains article hosted on personal site -->
+                    <div class="article-card">
+                        <div class="article-icon">🌐</div>
+                        <div class="article-content">
+                            <h4>Building Resilient Supply Chains with IoT</h4>
+                            <p class="article-description">An exploration of low‑power connectivity, LTE‑M and NB‑IoT technologies, and how Apple Ko and EELink’s devices enable intelligent logistics.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Website</span>
+                                <span class="article-category">IoT Insights</span>
+                            </div>
+                            <a class='article-link' href='iot_article' target='_blank'>
+                                Read Article <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- GPT50 low‑maintenance tracker article hosted on personal site -->
+                    <div class="article-card">
+                        <div class="article-icon">⚙️</div>
+                        <div class="article-content">
+                            <h4>Why GPT50 Is the Most Low‑Maintenance Tracker for Asset Managers</h4>
+                            <p class="article-description">Explore the engineering behind GPT50’s up to 10‑year standby, multi‑GNSS connectivity and intelligent sensor alarms that make it an ideal low‑maintenance tracking solution.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Website</span>
+                                <span class="article-category">Technical Insights</span>
+                            </div>
+                            <a class='article-link' href='gpt50_article' target='_blank'>
+                                Read Article <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-icon">📧</div>
+                        <div class="article-content">
+                            <h4>Weekly Newsletter: Supply Chain &amp; IoT Observations</h4>
+                            <p class="article-description">Regular insights and analysis on emerging trends in supply chain technology, IoT innovations, and market developments affecting global logistics operations.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">Substack</span>
+                                <span class="article-category">Weekly Insights</span>
+                            </div>
+                            <a href="https://applekoiot.substack.com/p/why-8yearbattery-gps-trackers-are" target="_blank" class="article-link">
+                                Subscribe &amp; Read <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-icon">💼</div>
+                        <div class="article-content">
+                            <h4>LinkedIn Articles &amp; Case Studies</h4>
+                            <p class="article-description">Professional insights, industry case studies, and thought leadership content focusing on IoT implementation strategies and real-world supply chain solutions.</p>
+                            <div class="article-meta">
+                                <span class="article-platform">LinkedIn</span>
+                                <span class="article-category">Professional Content</span>
+                            </div>
+                            <a href="https://www.linkedin.com/in/apple-ko/" target="_blank" class="article-link">
+                                Follow &amp; Connect <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articles-cta">
+                    <div class="cta-content">
+                        <h3>Stay Updated with Latest Insights</h3>
+                        <p>Get exclusive access to my latest articles, industry analysis, and practical IoT implementation guides delivered directly to your inbox.</p>
+                        <div class="cta-buttons">
+                            <a href="https://applekoiot.substack.com/" target="_blank" class="cta-button cta-primary">Subscribe to Newsletter</a>
+                            <a href="https://www.linkedin.com/in/apple-ko/" target="_blank" class="cta-button cta-secondary">Follow on LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section fade-in">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Connect with Apple Ko</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Ready to leverage cutting-edge IoT tracking for your organization? Let's discuss how smart sensors and GPS devices can solve your business challenges.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email</h4>
+                        <p>Direct business inquiries and collaboration opportunities</p>
+                        <a href="mailto:apple@eelinktech.com">apple@eelinktech.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📱</div>
+                        <h4>Phone</h4>
+                        <p>For urgent consultations and international partnerships</p>
+                        <a href="tel:+8615889393211">+86 158 8939 3211</a>
+                    </div>
+                    <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                        <h4>LinkedIn</h4>
+                        <p>Professional networking and industry insights</p>
+                        <a href="https://linkedin.com/in/apple-ko" target="_blank">Connect on LinkedIn</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📅</div>
+                        <h4>Schedule Meeting</h4>
+                        <p>Book a consultation for your IoT tracking needs</p>
+                        <a href="index.html#" onClick="alert('Contact via LinkedIn or email to schedule')">Book Consultation</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="newsletter">
+                    <h3>IoT Industry Insights Newsletter</h3>
+                    <p>Subscribe to receive industry analysis, implementation tips, case studies, and exclusive invites to webinars and events.</p>
+                    <form class="newsletter-form" onSubmit="event.preventDefault(); alert('Thank you for subscribing! You will receive our latest insights.');">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Eelink</h4>
+                    <a href="index.html#">Company History</a>
+                    <a href="index.html#">Leadership Team</a>
+                    <a href="index.html#">Global Presence</a>
+                    <a href="index.html#">Certifications</a>
+                    <a href="index.html#">Manufacturing</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Products &amp; Solutions</h4>
+                    <a href="index.html#">GPS Trackers</a>
+                    <a href="index.html#">IoT Sensors</a>
+                    <a href="index.html#">Cold Chain Solutions</a>
+                    <a href="index.html#">Fleet Management</a>
+                    <a href="index.html#">Asset Tracking</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="index.html#">White Papers</a>
+                    <a href="index.html#">Case Studies</a>
+                    <a href="index.html#">Technical Documentation</a>
+                    <a href="index.html#">API Documentation</a>
+                    <a href="index.html#">Integration Guides</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support &amp; Services</h4>
+                    <a href="index.html#">Technical Support</a>
+                    <a href="index.html#">Training Programs</a>
+                    <a href="index.html#">Distributor Program</a>
+                    <a href="index.html#">OEM/ODM Services</a>
+                    <a href="index.html#">Warranty</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Industry Focus</h4>
+                    <a href="index.html#">Logistics &amp; Transportation</a>
+                    <a href="index.html#">Cold Chain Management</a>
+                    <a href="index.html#">Construction &amp; Equipment</a>
+                    <a href="index.html#">Healthcare &amp; Pharma</a>
+                    <a href="index.html#">Agriculture</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Apple Ko - Eelink Communication Technology Co., Ltd. All rights reserved. | Shenzhen, China | Serving 166+ Countries Worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Counter animation for achievement numbers
+        function animateCounters() {
+            const counters = document.querySelectorAll('.achievement-number');
+            counters.forEach(counter => {
+                const target = counter.innerText;
+                const numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
+                const suffix = target.replace(/[0-9]/g, '');
+                let current = 0;
+                const increment = numericTarget / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= numericTarget) {
+                        counter.innerText = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.innerText = Math.floor(current) + suffix;
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation when section comes into view
+        const achievementSection = document.querySelector('.achievements-grid');
+        if (achievementSection) {
+            const achievementObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        achievementObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            achievementObserver.observe(achievementSection);
+        }
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const navLinks = document.querySelector('.nav-links');
+        const logo = document.querySelector('.logo');
+        
+        // Create mobile menu button
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.innerHTML = '☰';
+        mobileMenuBtn.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        `;
+        
+        logo.parentNode.insertBefore(mobileMenuBtn, navLinks);
+        
+        // Show mobile menu button on small screens
+        function checkScreenSize() {
+            if (window.innerWidth <= 768) {
+                mobileMenuBtn.style.display = 'block';
+            } else {
+                mobileMenuBtn.style.display = 'none';
+            }
+        }
+        
+        window.addEventListener('resize', checkScreenSize);
+        checkScreenSize();
+        
+        // Mobile menu toggle functionality
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.cssText += `
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background: white;
+                    flex-direction: column;
+                    padding: 1rem;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                `;
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                if (window.innerWidth <= 768) {
+                    navLinks.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+    <!-- WhatsApp floating button -->
+    <a href="https://wa.me/8615989326996?text=Hello%20Apple%20Ko%20Support" class="whatsapp-float" target="_blank" aria-label="WhatsApp Chat">
+        <svg viewBox="0 0 32 32" width="32" height="32">
+            <circle cx="16" cy="16" r="16" fill="#25d366" />
+            <path d="M21.152 17.44c-.326-.163-1.927-.95-2.227-1.058-.299-.109-.517-.163-.736.163-.218.327-.846 1.058-1.038 1.277-.191.218-.382.245-.708.082-.326-.164-1.379-.509-2.627-1.624-.971-.87-1.626-1.939-1.815-2.266-.19-.326-.02-.503.145-.666.149-.148.327-.382.49-.573.164-.19.218-.327.327-.545.109-.218.054-.409-.027-.573-.082-.163-.736-1.776-1.004-2.43-.263-.634-.529-.548-.736-.558h-.627c-.218 0-.573.082-.873.382-.299.299-1.146 1.12-1.146 2.727s1.173 3.168 1.336 3.386c.163.218 2.31 3.54 5.595 4.96.783.337 1.395.538 1.871.689.786.25 1.503.214 2.069.13.631-.094 1.927-.788 2.199-1.548.272-.76.272-1.414.19-1.548-.082-.136-.299-.218-.627-.382z" fill="#ffffff" />
+        </svg>
+    </a>
+
+    <!-- AI Chat Widget -->
+    <div class="ai-chat-container">
+        <button class="ai-chat-button">Chat Now</button>
+        <div class="ai-chat-window">
+            <div class="ai-chat-messages"></div>
+            <form class="ai-chat-form">
+                <input type="text" name="message" placeholder="Type your message..." autocomplete="off">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        /* WhatsApp floating button styles */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        /* AI chat widget styles */
+        .ai-chat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 90px;
+            z-index: 9999;
+            font-family: inherit;
+        }
+        .ai-chat-button {
+            background-color: #0f4c75;
+            color: #fff;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        .ai-chat-window {
+            display: none;
+            flex-direction: column;
+            width: 280px;
+            height: 360px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-top: 0.5rem;
+        }
+        .ai-chat-messages {
+            flex-grow: 1;
+            padding: 0.5rem;
+            overflow-y: auto;
+            font-size: 0.9rem;
+        }
+        .ai-chat-form {
+            display: flex;
+            border-top: 1px solid #e2e8f0;
+        }
+        .ai-chat-form input {
+            flex-grow: 1;
+            padding: 0.5rem;
+            border: none;
+            font-size: 0.9rem;
+            outline: none;
+        }
+        .ai-chat-form button {
+            background: #0f4c75;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+        }
+        .ai-chat-message {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        .ai-chat-message.user {
+            background: #f0f4f8;
+            align-self: flex-end;
+        }
+        .ai-chat-message.bot {
+            background: #edf2f7;
+            align-self: flex-start;
+        }
+    </style>
+
+    <script>
+        // Toggle AI chat window
+        const chatButton = document.querySelector('.ai-chat-button');
+        const chatWindow = document.querySelector('.ai-chat-window');
+        const chatMessages = document.querySelector('.ai-chat-messages');
+        const chatForm = document.querySelector('.ai-chat-form');
+
+        chatButton.addEventListener('click', function() {
+            chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Knowledge base for automatic responses
+        const knowledgeBase = [
+            {
+                keywords: ['gpt50','pallet','8-year','10 year','gpt 50'],
+                response: 'GPT50 is our ultra‑long standby GPS tracker for pallets and assets. It features a 24,000 mAh battery that supports up to 10‑year standby with once‑daily updates. The device uses multi‑constellation GNSS (GPS/GLONASS/BeiDou/Galileo) and communicates via LTE Cat‑1 with 2G fallback for global coverage. It weighs approximately 350 g (±10 g), operates from −20 °C to +60 °C, and has an IPX7 waterproof housing. Built‑in light, temperature and motion sensors enable long‑standby and emergency modes for reliable, real‑time visibility.'
+            },
+            {
+                keywords: ['gpt48','gpt48-x','magnetic','5-year','5 year'],
+                response: 'GPT48‑X is a magnetic wireless GPS tracker with LTE‑CAT M and NB‑IoT connectivity. It uses GPS/Beidou/Glonass positioning and can operate in long‑standby mode for up to five years thanks to its 8,000 mAh lithium battery. The tracker includes a motion sensor for vibration, drop and collision alarms, supports wake‑up by motion or SMS, and offers real‑time tracking in emergency mode. It’s IP65‑rated and supports OTA firmware upgrades via the Keelin platform.'
+            },
+            {
+                keywords: ['gpt29','in‑transit','monitoring','gpt 29'],
+                response: 'GPT29 is an in‑transit monitoring device equipped with sensors for temperature, humidity, light, shock and movement. It provides real‑time location and condition reports using GPS, Wi‑Fi, BLE and cellular networks (4G Cat M1 with 2G fallback). Features include built‑in motion and light sensors, one‑button activation, an IP67 waterproof rating, shock and vibration detection, and traceable temperature/humidity alerts.'
+            },
+            {
+                keywords: ['db01','beacon','bluetooth','temperature','humidity'],
+                response: 'DB01 is a Bluetooth 5.0 beacon with precise temperature and humidity sensors. It monitors environmental conditions in real time, storing data locally and broadcasting via Bluetooth to a host device. The device measures temperatures from –20 °C to 60 °C and humidity from 0–100 % RH. It also has a light sensor and accelerometer, offering alerts for temperature/humidity, light, vibration, tilt and low battery, and it can store up to 100,000 data entries.'
+            },
+            {
+                keywords: ['tk319','tk319l','vehicle tracker','fleet'],
+                response: 'TK319L is a 4G LTE Cat M1 vehicle tracking device designed for fleet and telematics applications. It delivers accurate real‑time location and driving behaviour events and supports sensors such as temperature and humidity. The tracker supports external equipment, offers voice functionality via VoLTE, full mobility with hand‑over between cells, low‑power consumption and extended in‑building range.'
+            },
+            {
+                keywords: ['tk418','bluetooth','asset tracking','cut engine','iot'],
+                response: 'TK418 is an IoT asset GPS device with LTE Cat M1/NB‑IoT connectivity and Bluetooth Low Energy. It functions as a Bluetooth gateway for tagged assets and supports options such as a relay for remote engine cut‑off, a temperature sensor, an SOS button or an external battery. It features Bluetooth 5.0 and GPS, supports engine cut and restore commands, includes ACC detection, a built‑in battery with disconnect/low‑power alarm, IP65 waterproof rating, real‑time tracking, I/O or RS232 expansion and a built‑in G‑sensor along with multiple alarms.'
+            },
+            {
+                keywords: ['eelink','company','services','solutions'],
+                response: 'EELINK is a leading IoT hardware manufacturer with over 20 years of experience. The company provides GPS trackers, asset trackers, personal trackers, temperature and humidity loggers and Bluetooth beacons. Their solutions support vehicle tracking, supply chain visibility, fleet management, cold‑chain monitoring and more, and they offer hardware, software platforms and custom OEM/ODM services.'
+            }
+        ];
+
+        // Helper to append a message to chat
+        function appendMessage(text, type) {
+            const msg = document.createElement('div');
+            msg.classList.add('ai-chat-message', type);
+            msg.textContent = text;
+            chatMessages.appendChild(msg);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Form submission event for chat
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = chatForm.message;
+            const userMsg = input.value.trim();
+            if (!userMsg) return;
+            appendMessage(userMsg, 'user');
+            input.value = '';
+
+            // Find an answer based on keywords
+            const query = userMsg.toLowerCase();
+            let response = '';
+            for (const item of knowledgeBase) {
+                for (const keyword of item.keywords) {
+                    if (query.includes(keyword)) {
+                        response = item.response;
+                        break;
+                    }
+                }
+                if (response) break;
+            }
+            if (!response) {
+                response = 'Thank you for your message. Our team will get back to you shortly with more information.';
+            }
+            // Append bot response with slight delay to simulate typing
+            setTimeout(() => {
+                appendMessage(response, 'bot');
+            }, 500);
+        });
+    </script>
+</body>
