@@ -1,0 +1,530 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact Form Preview – Apple Ko</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #0f4c75 0%, #3282b8 50%, #bbe1fa 100%);
+        min-height: 100vh;
+        padding: 60px 0;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        font-weight: 700;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(to right, #0f4c75, #bbe1fa);
+        border-radius: 2px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 3rem;
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-section {
+        color: white;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-bottom: 4rem;
+      }
+
+      .contact-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 3rem;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .contact-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .contact-icon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-card h4 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .contact-card p {
+        margin-bottom: 1rem;
+        opacity: 0.9;
+      }
+
+      .contact-card a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      .contact-form {
+        text-align: left;
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact-form-header {
+        text-align: center;
+      }
+
+      .contact-form-header .contact-icon {
+        margin-bottom: 1rem;
+      }
+
+      .contact-form-header h3 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+
+      .contact-form-header p {
+        margin: 0 auto;
+        max-width: 420px;
+        opacity: 0.9;
+      }
+
+      .contact-form .form-fields {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .contact-form .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .contact-form label {
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.95rem 1.1rem;
+        border-radius: 14px;
+        border: none;
+        background: rgba(255, 255, 255, 0.92);
+        color: #0f4c75;
+        font-size: 1rem;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+        transition: box-shadow 0.3s ease, transform 0.2s ease;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(187, 225, 250, 0.8);
+        transform: translateY(-2px);
+      }
+
+      .contact-form textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .contact-form button {
+        justify-self: flex-start;
+        padding: 0.9rem 2.5rem;
+        border-radius: 999px;
+        border: none;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        background: linear-gradient(135deg, #bbe1fa, #ffffff);
+        color: #0f4c75;
+        box-shadow: 0 15px 35px rgba(10, 35, 58, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .contact-form button:hover,
+      .contact-form button:focus-visible {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 45px rgba(10, 35, 58, 0.3);
+        outline: none;
+      }
+
+      .contact-form button:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .field-error {
+        display: none;
+        font-size: 0.9rem;
+        color: #ffe4e4;
+      }
+
+      .field-error.visible {
+        display: block;
+      }
+
+      .contact-form input[aria-invalid='true'],
+      .contact-form textarea[aria-invalid='true'] {
+        box-shadow: 0 0 0 3px rgba(255, 118, 118, 0.6);
+      }
+
+      .form-status {
+        display: none;
+        border-radius: 14px;
+        padding: 0.9rem 1.2rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .form-status.visible {
+        display: block;
+      }
+
+      .form-status.is-success {
+        background: rgba(46, 204, 113, 0.2);
+        color: #e9fff1;
+      }
+
+      .form-status.is-error {
+        background: rgba(255, 118, 118, 0.25);
+        color: #fff5f5;
+      }
+
+      .form-status.is-pending {
+        background: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.95);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Connect with Apple Ko</h2>
+        <p class="section-subtitle">
+          Ready to leverage cutting-edge IoT tracking for your organization? Let's discuss how smart sensors and GPS devices can solve your business challenges.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h4>Email</h4>
+            <p>Direct business inquiries and collaboration opportunities</p>
+            <a href="mailto:apple@eelinktech.com">apple@eelinktech.com</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">📱</div>
+            <h4>Phone</h4>
+            <p>For urgent consultations and international partnerships</p>
+            <a href="tel:+8615889393211">+86 158 8939 3211</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">💼</div>
+            <h4>LinkedIn</h4>
+            <p>Professional networking and industry insights</p>
+            <a href="https://linkedin.com/in/apple-ko" target="_blank" rel="noopener">
+              Connect on LinkedIn
+            </a>
+          </div>
+
+          <form
+            id="contact-form"
+            class="contact-card contact-form"
+            data-endpoint="https://formsubmit.co/ajax/apple@eelinktech.com"
+            novalidate
+          >
+            <div class="contact-form-header">
+              <div class="contact-icon" aria-hidden="true">📝</div>
+              <h3>Tell Us About Your Project</h3>
+              <p>
+                Share your objectives and timeline so we can align the right IoT hardware, firmware, and global deployment support.
+              </p>
+            </div>
+
+            <div class="form-fields">
+              <div class="form-row">
+                <label for="contact-name">Name *</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Your full name"
+                  required
+                />
+                <p class="field-error" data-error-for="name"></p>
+              </div>
+
+              <div class="form-row">
+                <label for="contact-email">Email *</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@company.com"
+                  required
+                />
+                <p class="field-error" data-error-for="email"></p>
+              </div>
+
+              <div class="form-row">
+                <label for="contact-company">Company or Organization</label>
+                <input
+                  id="contact-company"
+                  name="company"
+                  type="text"
+                  autocomplete="organization"
+                  placeholder="Company name"
+                />
+                <p class="field-error" data-error-for="company"></p>
+              </div>
+
+              <div class="form-row">
+                <label for="contact-message">Message *</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  placeholder="How can we help?"
+                  required
+                ></textarea>
+                <p class="field-error" data-error-for="message"></p>
+              </div>
+            </div>
+
+            <button type="submit">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const form = document.getElementById('contact-form');
+        if (!form) {
+          return;
+        }
+
+        const endpoint = form.dataset.endpoint;
+        if (!endpoint) {
+          console.warn('Contact form endpoint is not defined.');
+          return;
+        }
+
+        const nameInput = form.querySelector('input[name="name"]');
+        const emailInput = form.querySelector('input[name="email"]');
+        const companyInput = form.querySelector('input[name="company"]');
+        const messageInput = form.querySelector('textarea[name="message"]');
+        const statusEl = form.querySelector('[data-form-status]');
+        const submitButton = form.querySelector('button[type="submit"]');
+        const defaultButtonLabel = submitButton ? submitButton.textContent : '';
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        function updateStatus(message, state) {
+          if (!statusEl) {
+            return;
+          }
+
+          statusEl.textContent = message;
+          statusEl.classList.remove('is-success', 'is-error', 'is-pending', 'visible');
+
+          if (message) {
+            statusEl.classList.add('visible');
+            if (state) {
+              statusEl.classList.add(`is-${state}`);
+            }
+          }
+        }
+
+        function showFieldError(input, message) {
+          if (!input) {
+            return;
+          }
+
+          input.setAttribute('aria-invalid', 'true');
+          const errorEl = form.querySelector(\`[data-error-for="\${input.name}"]\`);
+          if (errorEl) {
+            errorEl.textContent = message;
+            errorEl.classList.add('visible');
+          }
+        }
+
+        function clearFieldError(input) {
+          if (!input) {
+            return;
+          }
+
+          input.removeAttribute('aria-invalid');
+          const errorEl = form.querySelector(\`[data-error-for="\${input.name}"]\`);
+          if (errorEl) {
+            errorEl.textContent = '';
+            errorEl.classList.remove('visible');
+          }
+        }
+
+        function setSubmitting(isSubmitting) {
+          if (!submitButton) {
+            return;
+          }
+
+          submitButton.disabled = isSubmitting;
+          submitButton.textContent = isSubmitting ? 'Sending…' : defaultButtonLabel;
+        }
+
+        [nameInput, emailInput, companyInput, messageInput].forEach((field) => {
+          if (!field) {
+            return;
+          }
+
+          field.addEventListener('input', () => {
+            clearFieldError(field);
+            if (statusEl) {
+              updateStatus('', null);
+            }
+          });
+        });
+
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          let hasError = false;
+          updateStatus('', null);
+
+          const name = nameInput ? nameInput.value.trim() : '';
+          const email = emailInput ? emailInput.value.trim() : '';
+          const company = companyInput ? companyInput.value.trim() : '';
+          const message = messageInput ? messageInput.value.trim() : '';
+
+          if (!name) {
+            hasError = true;
+            showFieldError(nameInput, 'Please enter your name.');
+          }
+
+          if (!email) {
+            hasError = true;
+            showFieldError(emailInput, 'Please enter your email address.');
+          } else if (!emailPattern.test(email)) {
+            hasError = true;
+            showFieldError(emailInput, 'Use a valid business email address.');
+          }
+
+          if (!message || message.length < 10) {
+            hasError = true;
+            showFieldError(messageInput, 'Share a bit more detail so we can prepare the right answer.');
+          }
+
+          if (hasError) {
+            updateStatus('Please correct the highlighted fields and try again.', 'error');
+            return;
+          }
+
+          const payload = {
+            name,
+            email,
+            company,
+            message,
+            _replyto: email,
+            _subject: \`New inquiry from \${name || 'appleko.io visitor'}\`,
+            _template: 'table',
+            _captcha: 'false',
+            source: 'appleko.io contact form'
+          };
+
+          try {
+            setSubmitting(true);
+            updateStatus('Sending your message…', 'pending');
+
+            const response = await fetch(endpoint, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+              },
+              body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+              throw new Error(\`Request failed with status \${response.status}\`);
+            }
+
+            let successMessage = 'Thank you! Your inquiry is on its way to Apple.';
+
+            try {
+              const data = await response.json();
+              if (data && typeof data.message === 'string') {
+                successMessage = data.message;
+              }
+            } catch (parseError) {
+              // ignore JSON parse issues and fall back to default message
+            }
+
+            updateStatus(successMessage, 'success');
+            form.reset();
+          } catch (error) {
+            console.error('Unable to send contact form submission', error);
+            updateStatus(
+              'Something went wrong while sending your message. Please try again or email apple@eelinktech.com directly.',
+              'error'
+            );
+          } finally {
+            setSubmitting(false);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
