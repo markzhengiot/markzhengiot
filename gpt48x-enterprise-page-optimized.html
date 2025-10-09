@@ -15,9 +15,10 @@
         }
         
         :root {
-            --primary-blue: #0052cc;
-            --dark-blue: #003087;
-            --light-blue: #e6f2ff;
+                /* Updated color palette to match the Apple Ko site */
+                --primary-blue: #3282b8;
+                --dark-blue: #0f4c75;
+                --light-blue: #bbe1fa;
             --gray-900: #172b4d;
             --gray-800: #253858;
             --gray-700: #42526e;
@@ -37,7 +38,10 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: var(--gray-900);
-            background: #fff;
+            /* Use a vibrant gradient background similar to the Apple Ko homepage */
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 50%, var(--light-blue) 100%);
+            /* Add top padding to accommodate fixed header */
+            padding-top: 120px;
         }
         
         /* Top Bar */
@@ -71,13 +75,69 @@
             color: #fff;
         }
         
-        /* Main Navigation */
-        .main-nav {
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-            position: sticky;
+        /* Header and Navigation (borrowed from Apple Ko home page) */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            position: fixed;
             top: 0;
+            width: 100%;
             z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-900);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hide original top bar if present */
+        .top-bar {
+            display: none;
+        }
+                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                 position: sticky;
+                 top: 0;
+                 z-index: 1000;
         }
         
         .nav-container {
@@ -158,6 +218,41 @@
             padding: 14px 32px;
             font-size: 16px;
         }
+
+            /* Apple Ko footer styles */
+            .custom-footer {
+                margin-top: 90px;
+                background: rgba(10, 35, 58, 0.92);
+                color: rgba(255, 255, 255, 0.85);
+            }
+            .custom-footer .footer-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 2rem;
+                padding: 3rem 0;
+            }
+            .custom-footer .custom-footer-section h4 {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+                color: #fff;
+            }
+            .custom-footer .custom-footer-section a {
+                display: block;
+                color: rgba(255, 255, 255, 0.78);
+                text-decoration: none;
+                margin-bottom: 0.6rem;
+                transition: color 0.3s ease;
+            }
+            .custom-footer .custom-footer-section a:hover {
+                color: #bbe1fa;
+            }
+            .custom-footer .custom-footer-bottom {
+                text-align: center;
+                padding: 1.5rem 0 2.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                font-size: 0.95rem;
+                color: rgba(255, 255, 255, 0.65);
+            }
         
         /* Breadcrumb */
         .breadcrumb {
@@ -1280,40 +1375,24 @@
 </head>
 <body>
     <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-content">
-            <div class="top-bar-links">
-                <a href="#">Partner Portal</a>
-                <a href="#">Support Center</a>
-                <a href="#">Developer Hub</a>
-                <a href="#">Training Academy</a>
-            </div>
-            <div class="top-bar-links">
-                <a href="#">Global Offices</a>
-                <a href="#">Contact: +1-888-EELINK</a>
-                <a href="#">EN | 中文</a>
-            </div>
+        <!-- Main Navigation -->
+    <!-- Unified header/navigation from Apple Ko homepage -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">Apple&nbsp;Ko</a>
+                <ul class="nav-links">
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#solutions">Solutions</a></li>
+                    <li><a href="/#experience">Experience</a></li>
+                    <li><a href="/#expertise">Expertise</a></li>
+                    <li><a href="/book-meeting">Book Meeting</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="#" class="logo">EELINK</a>
-            <ul class="nav-menu">
-                <li><a href="#" class="active">Products</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Industries</a></li>
-                <li><a href="#">Platform</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Company</a></li>
-            </ul>
-            <div class="nav-cta">
-                <button class="btn btn-secondary" onclick="requestQuote()">Request Quote</button>
-                <button class="btn btn-primary" onclick="contactSales()">Contact Sales</button>
-            </div>
-        </div>
-    </nav>
+    </header>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
@@ -1376,18 +1455,16 @@
             </div>
             
             <div class="hero-image">
-                <div class="product-image-container">
-                    <div class="product-main-image" id="mainImage">
-                        GPT48-X Product Image
+                    <div class="product-image-container">
+                        <!-- Embed actual product images from the repository -->
+                        <img id="mainImage" class="product-main-image" src="/gpt48_assets/render1.png" alt="GPT48‑X main image" style="width:100%; height:400px; object-fit:contain; border-radius:8px;">
+                        <div class="image-thumbnails">
+                            <img class="thumbnail active" src="/gpt48_assets/render1.png" alt="GPT48‑X angle 1">
+                            <img class="thumbnail" src="/gpt48_assets/render2.png" alt="GPT48‑X angle 2">
+                            <img class="thumbnail" src="/gpt48_assets/render3.png" alt="GPT48‑X angle 3">
+                            <img class="thumbnail" src="/gpt48_assets/render4.png" alt="GPT48‑X angle 4">
+                        </div>
                     </div>
-                    <div class="image-thumbnails">
-                        <div class="thumbnail active" onclick="changeImage(0)"></div>
-                        <div class="thumbnail" onclick="changeImage(1)"></div>
-                        <div class="thumbnail" onclick="changeImage(2)"></div>
-                        <div class="thumbnail" onclick="changeImage(3)"></div>
-                        <div class="thumbnail" onclick="changeImage(4)"></div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -2527,8 +2604,9 @@ VERSION#                       // Firmware version
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <!-- Footer (original EELINK footer is commented out for archival) -->
+        <!--
+        <footer class="footer">
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -2601,7 +2679,52 @@ VERSION#                       // Firmware version
                 </div>
             </div>
         </div>
-    </footer>
+        </footer>
+        -->
+        <!-- Unified Apple Ko footer -->
+        <footer class="custom-footer">
+            <div class="footer-container">
+                <div class="custom-footer-section">
+                    <h4>About Eelink</h4>
+                    <a href="/#">Company History</a>
+                    <a href="/#">Leadership Team</a>
+                    <a href="/#">Global Presence</a>
+                    <a href="/#">Certifications</a>
+                    <a href="/#">Manufacturing</a>
+                </div>
+                <div class="custom-footer-section">
+                    <h4>IoT Solutions</h4>
+                    <a href="/#products">Asset Tracking</a>
+                    <a href="/#products">Cold Chain Monitoring</a>
+                    <a href="/#products">Supply Chain Visibility</a>
+                    <a href="/#expertise">Industry Expertise</a>
+                </div>
+                <div class="custom-footer-section">
+                    <h4>Connect with Apple Ko</h4>
+                    <a href="mailto:apple@eelinktech.com">apple@eelinktech.com</a>
+                    <a href="tel:+8615889393211">+86 158 8939 3211</a>
+                    <a href="https://linkedin.com/in/apple-ko" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="/book-consultation">Book Meeting</a>
+                </div>
+                <div class="custom-footer-section">
+                    <h4>Resources</h4>
+                    <a href="https://appleko.io/blog/">Blog</a>
+                    <a href="https://applekoiot.substack.com/" target="_blank" rel="noopener">Newsletter</a>
+                    <a href="/#experience">Case Studies</a>
+                    <a href="/#contact">Contact</a>
+                </div>
+            </div>
+            <div class="custom-footer-bottom">© <span id="year">2025</span> Apple Ko. All rights reserved.</div>
+        </footer>
+        <script>
+            // Update year in footer to always show the current year
+            (function(){
+                const yearSpan = document.getElementById('year');
+                if (yearSpan) {
+                    yearSpan.textContent = new Date().getFullYear();
+                }
+            })();
+        </script>
 
     <script>
         // Initialize page
@@ -2627,6 +2750,19 @@ VERSION#                       // Firmware version
                             behavior: 'smooth'
                         });
                     }
+                });
+            });
+
+            // Product image thumbnails gallery
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(function(thumbnail) {
+                thumbnail.addEventListener('click', function() {
+                    if (mainImage && this.src) {
+                        mainImage.src = this.src;
+                    }
+                    thumbnails.forEach(function(t) { t.classList.remove('active'); });
+                    this.classList.add('active');
                 });
             });
             
