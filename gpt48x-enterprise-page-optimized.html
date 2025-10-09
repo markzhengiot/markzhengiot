@@ -1,0 +1,2792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eelink GPT48-X Industrial LTE-M/NB-IoT Asset Tracker with 5-year battery life. Enterprise-grade GPS tracking solution for global supply chain and fleet management.">
+    <meta name="keywords" content="GPS tracker, asset tracking, LTE-M, NB-IoT, fleet management, container tracking, industrial IoT, Eelink">
+    <title>GPT48-X LTE-M/NB-IoT Asset Tracker | Industrial IoT Solution | Eelink Technology</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-blue: #0052cc;
+            --dark-blue: #003087;
+            --light-blue: #e6f2ff;
+            --gray-900: #172b4d;
+            --gray-800: #253858;
+            --gray-700: #42526e;
+            --gray-600: #6b778c;
+            --gray-500: #8993a4;
+            --gray-400: #a5adba;
+            --gray-300: #c1c7d0;
+            --gray-200: #dfe1e6;
+            --gray-100: #f4f5f7;
+            --gray-50: #fafbfc;
+            --success: #00875a;
+            --warning: #ff991f;
+            --danger: #de350b;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: #fff;
+        }
+        
+        /* Top Bar */
+        .top-bar {
+            background: var(--gray-900);
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        
+        .top-bar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .top-bar-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .top-bar-links a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .top-bar-links a:hover {
+            color: #fff;
+        }
+        
+        /* Main Navigation */
+        .main-nav {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+        
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            padding: 24px 0;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--primary-blue);
+        }
+        
+        .nav-cta {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .btn {
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+            display: inline-block;
+        }
+        
+        .btn-secondary {
+            background: #fff;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light-blue);
+        }
+        
+        .btn-primary {
+            background: var(--primary-blue);
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: var(--dark-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .btn-large {
+            padding: 14px 32px;
+            font-size: 16px;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--gray-50);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .breadcrumb-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: var(--gray-600);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .breadcrumb span {
+            color: var(--gray-400);
+            margin: 0 8px;
+        }
+        
+        /* Product Hero */
+        .product-hero {
+            background: linear-gradient(135deg, var(--gray-50) 0%, #fff 100%);
+            padding: 60px 0;
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+        }
+        
+        .product-badge {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+        
+        .product-sku {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            color: var(--gray-700);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+        
+        .metric-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+        }
+        
+        .metric-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-size: 12px;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .product-image-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .product-main-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 18px;
+        }
+        
+        .image-thumbnails {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+        .thumbnail {
+            width: 60px;
+            height: 60px;
+            background: var(--gray-100);
+            border: 2px solid var(--gray-300);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .thumbnail:hover,
+        .thumbnail.active {
+            border-color: var(--primary-blue);
+            transform: scale(1.05);
+        }
+        
+        .certifications {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .cert-badge {
+            background: #fff;
+            border: 1px solid var(--gray-300);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-700);
+            text-transform: uppercase;
+        }
+        
+        /* Product Navigation */
+        .product-nav {
+            background: #fff;
+            border-bottom: 1px solid var(--gray-200);
+            position: sticky;
+            top: 72px;
+            z-index: 900;
+        }
+        
+        .nav-tabs {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 32px;
+            overflow-x: auto;
+        }
+        
+        .nav-tab {
+            padding: 20px 0;
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        .nav-tab:hover,
+        .nav-tab.active {
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+        }
+        
+        /* Content Sections */
+        .content-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .section-header {
+            margin-bottom: 48px;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray-700);
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+        
+        .feature-card {
+            padding: 32px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            background: #fff;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            border-color: var(--primary-blue);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--light-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--gray-900);
+        }
+        
+        .feature-description {
+            font-size: 14px;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+        
+        /* Specifications */
+        .specs-container {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 40px;
+        }
+        
+        .specs-sidebar {
+            position: sticky;
+            top: 160px;
+            height: fit-content;
+        }
+        
+        .spec-category-list {
+            list-style: none;
+        }
+        
+        .spec-category-item {
+            margin-bottom: 4px;
+        }
+        
+        .spec-category-btn {
+            width: 100%;
+            text-align: left;
+            padding: 12px 16px;
+            background: var(--gray-50);
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+        
+        .spec-category-btn:hover {
+            background: #fff;
+            border-color: var(--gray-300);
+        }
+        
+        .spec-category-btn.active {
+            background: var(--primary-blue);
+            color: #fff;
+            border-color: var(--primary-blue);
+        }
+        
+        .specs-content {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .spec-panel {
+            display: none;
+            padding: 40px;
+        }
+        
+        .spec-panel.active {
+            display: block;
+        }
+        
+        .spec-group {
+            margin-bottom: 32px;
+        }
+        
+        .spec-group:last-child {
+            margin-bottom: 0;
+        }
+        
+        .spec-group-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--gray-900);
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        
+        .spec-table {
+            width: 100%;
+        }
+        
+        .spec-table tr {
+            border-bottom: 1px solid var(--gray-100);
+        }
+        
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-table td {
+            padding: 12px 0;
+            font-size: 14px;
+        }
+        
+        .spec-table td:first-child {
+            color: var(--gray-600);
+            width: 40%;
+        }
+        
+        .spec-table td:last-child {
+            color: var(--gray-900);
+            font-weight: 500;
+        }
+        
+        /* Comparison Table */
+        .comparison-section {
+            background: var(--gray-50);
+            padding: 60px 40px;
+            border-radius: 8px;
+            margin-top: 48px;
+        }
+        
+        .comparison-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        
+        .comparison-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+        
+        .comparison-table {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background: var(--gray-100);
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        
+        .comparison-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 14px;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table .highlight {
+            background: var(--light-blue);
+            font-weight: 600;
+        }
+        
+        /* Operating Modes */
+        .modes-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 32px;
+        }
+        
+        .mode-card {
+            background: #fff;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 32px;
+            position: relative;
+        }
+        
+        .mode-card.recommended {
+            border-color: var(--primary-blue);
+        }
+        
+        .recommended-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .mode-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+        }
+        
+        .mode-description {
+            color: var(--gray-700);
+            margin-bottom: 24px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .mode-features {
+            list-style: none;
+        }
+        
+        .mode-features li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+        
+        .mode-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        /* ROI Calculator */
+        .roi-calculator {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            border-radius: 12px;
+            padding: 48px;
+            color: #fff;
+            margin-top: 48px;
+        }
+        
+        .roi-title {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        
+        .roi-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        
+        .calculator-inputs {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 32px;
+        }
+        
+        .input-group {
+            margin-bottom: 24px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .input-group input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .input-group select option {
+            color: var(--gray-900);
+        }
+        
+        .calculator-results {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .result-item {
+            background: rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .result-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        
+        .result-value {
+            font-size: 32px;
+            font-weight: 700;
+        }
+        
+        .result-note {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+        
+        /* Applications */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+        
+        .use-case-card {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .use-case-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+        
+        .use-case-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            padding: 24px;
+            color: #fff;
+        }
+        
+        .use-case-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        
+        .use-case-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .use-case-content {
+            padding: 24px;
+        }
+        
+        .use-case-description {
+            font-size: 14px;
+            color: var(--gray-700);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .use-case-stats {
+            display: flex;
+            gap: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .stat-item {
+            flex: 1;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            color: var(--gray-600);
+            text-transform: uppercase;
+        }
+        
+        /* Integration */
+        .integration-tabs {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        
+        .integration-tab {
+            padding: 12px 24px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: all 0.2s;
+            margin-bottom: -2px;
+        }
+        
+        .integration-tab.active {
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+        }
+        
+        .integration-content {
+            background: var(--gray-50);
+            border-radius: 8px;
+            padding: 32px;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 24px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+            margin-top: 16px;
+        }
+        
+        /* Resources */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        
+        .resource-card {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .resource-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .resource-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            background: var(--gray-100);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+        
+        .resource-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--gray-900);
+        }
+        
+        .resource-info {
+            font-size: 12px;
+            color: var(--gray-600);
+            margin-bottom: 16px;
+        }
+        
+        /* Support */
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 32px;
+        }
+        
+        .support-card {
+            text-align: center;
+        }
+        
+        .support-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 28px;
+        }
+        
+        .support-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--gray-900);
+        }
+        
+        .support-info {
+            font-size: 14px;
+            color: var(--gray-700);
+            line-height: 1.5;
+        }
+        
+        /* FAQ */
+        .faq-container {
+            margin-top: 32px;
+        }
+        
+        .faq-item {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 20px 24px;
+            background: #fff;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--gray-900);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+        
+        .faq-arrow {
+            transition: transform 0.3s;
+            color: var(--gray-600);
+        }
+        
+        .faq-question.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            display: none;
+            padding: 0 24px 20px;
+            color: var(--gray-700);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        /* Related Products */
+        .related-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .related-product-card {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .related-product-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        
+        .related-product-image {
+            width: 100%;
+            height: 120px;
+            background: var(--gray-100);
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+        
+        .related-product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--gray-900);
+        }
+        
+        .related-product-desc {
+            font-size: 12px;
+            color: var(--gray-600);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .cta-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .cta-title {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+        
+        .cta-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+        
+        .btn-white {
+            background: #fff;
+            color: var(--primary-blue);
+        }
+        
+        .btn-white:hover {
+            background: var(--gray-100);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: #fff;
+            padding: 60px 0 24px;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-description {
+            color: var(--gray-400);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .social-link:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .footer-column h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+        }
+        
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-copyright {
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+        
+        .footer-legal {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .footer-legal a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .footer-legal a:hover {
+            color: #fff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .specs-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .specs-sidebar {
+                position: static;
+                display: flex;
+                gap: 8px;
+                overflow-x: auto;
+                padding-bottom: 16px;
+            }
+            
+            .features-grid,
+            .use-cases-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .calculator-grid,
+            .modes-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .key-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid,
+            .use-cases-grid,
+            .resources-grid,
+            .support-options,
+            .related-products {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-links">
+                <a href="#">Partner Portal</a>
+                <a href="#">Support Center</a>
+                <a href="#">Developer Hub</a>
+                <a href="#">Training Academy</a>
+            </div>
+            <div class="top-bar-links">
+                <a href="#">Global Offices</a>
+                <a href="#">Contact: +1-888-EELINK</a>
+                <a href="#">EN | 中文</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">EELINK</a>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Products</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Industries</a></li>
+                <li><a href="#">Platform</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Company</a></li>
+            </ul>
+            <div class="nav-cta">
+                <button class="btn btn-secondary" onclick="requestQuote()">Request Quote</button>
+                <button class="btn btn-primary" onclick="contactSales()">Contact Sales</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="#">Home</a>
+            <span>›</span>
+            <a href="#">Products</a>
+            <span>›</span>
+            <a href="#">Asset Trackers</a>
+            <span>›</span>
+            <strong>GPT48-X</strong>
+        </div>
+    </div>
+
+    <!-- Product Hero Section -->
+    <section class="product-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="product-badge">Enterprise IoT Solution</div>
+                <h1>GPT48-X LTE-M/NB-IoT Asset Tracker</h1>
+                <div class="product-sku">SKU: GPT48-X-LTE | Model Year: 2024 | Firmware: v2.4.1</div>
+                
+                <p class="hero-description">
+                    Industrial-grade asset tracking solution engineered for zero-maintenance deployment. 
+                    Delivers unmatched 5-year battery life with enterprise-grade reliability across global LTE-M/NB-IoT networks. 
+                    Ideal for shipping containers, trailers, construction equipment, and high-value asset monitoring.
+                </p>
+                
+                <div class="key-metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">5</div>
+                        <div class="metric-label">Years Battery Life</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">8000</div>
+                        <div class="metric-label">mAh Li-MnO₂</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">IP65</div>
+                        <div class="metric-label">Protection Rating</div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" onclick="requestQuote()">Request Custom Quote</button>
+                    <button class="btn btn-secondary btn-large" onclick="downloadDatasheet()">Download Datasheet</button>
+                    <button class="btn btn-secondary btn-large" onclick="scheduleDemo()">Schedule Demo</button>
+                </div>
+                
+                <div class="certifications">
+                    <span class="cert-badge">FCC Part 15</span>
+                    <span class="cert-badge">CE RED</span>
+                    <span class="cert-badge">IC RSS-247</span>
+                    <span class="cert-badge">PTCRB</span>
+                    <span class="cert-badge">RoHS</span>
+                    <span class="cert-badge">REACH</span>
+                    <span class="cert-badge">UN38.3</span>
+                    <span class="cert-badge">WEEE</span>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="product-image-container">
+                    <div class="product-main-image" id="mainImage">
+                        GPT48-X Product Image
+                    </div>
+                    <div class="image-thumbnails">
+                        <div class="thumbnail active" onclick="changeImage(0)"></div>
+                        <div class="thumbnail" onclick="changeImage(1)"></div>
+                        <div class="thumbnail" onclick="changeImage(2)"></div>
+                        <div class="thumbnail" onclick="changeImage(3)"></div>
+                        <div class="thumbnail" onclick="changeImage(4)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Navigation Tabs -->
+    <nav class="product-nav">
+        <div class="nav-tabs">
+            <a href="#overview" class="nav-tab active">Overview</a>
+            <a href="#features" class="nav-tab">Key Features</a>
+            <a href="#specifications" class="nav-tab">Technical Specifications</a>
+            <a href="#modes" class="nav-tab">Operating Modes</a>
+            <a href="#applications" class="nav-tab">Applications</a>
+            <a href="#integration" class="nav-tab">Integration & API</a>
+            <a href="#resources" class="nav-tab">Resources</a>
+            <a href="#support" class="nav-tab">Support</a>
+            <a href="#faq" class="nav-tab">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Enterprise-Grade Asset Intelligence Platform</h2>
+            <p class="section-subtitle">
+                The GPT48-X represents the pinnacle of industrial IoT tracking technology, combining ultra-low power consumption 
+                with global connectivity to deliver unprecedented operational visibility. Engineered for mission-critical deployments 
+                where reliability and longevity are paramount.
+            </p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔋</div>
+                <h3 class="feature-title">5-Year Battery Life</h3>
+                <p class="feature-description">
+                    8000mAh Li-MnO₂ primary cell with &lt;1% annual self-discharge. 
+                    Achieves 5-year operation with daily reporting through advanced PSM/eDRX power management 
+                    and intelligent motion-based wake algorithms.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3 class="feature-title">Global IoT Connectivity</h3>
+                <p class="feature-description">
+                    Dual-mode LTE Cat-M1 and NB-IoT support across 17 frequency bands. 
+                    Operates in 180+ countries with automatic network selection and seamless roaming capabilities.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3 class="feature-title">Multi-GNSS Precision</h3>
+                <p class="feature-description">
+                    Concurrent GPS, GLONASS, and BeiDou reception delivers 2-5m accuracy. 
+                    Enhanced urban canyon performance with -165dBm tracking sensitivity and LBS fallback.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3 class="feature-title">Industrial Durability</h3>
+                <p class="feature-description">
+                    IP65-rated enclosure operates from -20°C to +65°C. 
+                    Meets IEC 60068-2-27 shock and IEC 60068-2-6 vibration standards with integrated neodymium mounting.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Smart Power Management</h3>
+                <p class="feature-description">
+                    Deep sleep current &lt;10μA with motion-activated wake. 
+                    Configurable reporting intervals and emergency mode activation for critical tracking scenarios.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3 class="feature-title">Real-time Alerts</h3>
+                <p class="feature-description">
+                    Instant notifications for vibration, collision, tamper, and geo-fence events. 
+                    Multi-channel alerting via platform, SMS, and webhook integration.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications Section -->
+    <section id="specifications" class="content-section" style="background: var(--gray-50);">
+        <div class="section-header">
+            <h2 class="section-title">Technical Specifications</h2>
+            <p class="section-subtitle">
+                Comprehensive technical parameters for system architects and integration engineers. 
+                All specifications verified through rigorous testing in accordance with international standards.
+            </p>
+        </div>
+        
+        <div class="specs-container">
+            <aside class="specs-sidebar">
+                <ul class="spec-category-list">
+                    <li class="spec-category-item">
+                        <button class="spec-category-btn active" data-panel="hardware">
+                            Hardware Architecture
+                        </button>
+                    </li>
+                    <li class="spec-category-item">
+                        <button class="spec-category-btn" data-panel="network">
+                            Network & Connectivity
+                        </button>
+                    </li>
+                    <li class="spec-category-item">
+                        <button class="spec-category-btn" data-panel="positioning">
+                            Positioning Technology
+                        </button>
+                    </li>
+                    <li class="spec-category-item">
+                        <button class="spec-category-btn" data-panel="power">
+                            Power Management
+                        </button>
+                    </li>
+                    <li class="spec-category-item">
+                        <button class="spec-category-btn" data-panel="environmental">
+                            Environmental Ratings
+                        </button>
+                    </li>
+                    <li class="spec-category-item">
+                        <button class="spec-category-btn" data-panel="compliance">
+                            Compliance & Certifications
+                        </button>
+                    </li>
+                </ul>
+            </aside>
+            
+            <div class="specs-content">
+                <!-- Hardware Panel -->
+                <div id="hardware-panel" class="spec-panel active">
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Physical Specifications</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>Dimensions</td>
+                                <td>101 × 60 × 25.5 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>130g (including battery)</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosure Material</td>
+                                <td>ABS+PC Composite</td>
+                            </tr>
+                            <tr>
+                                <td>Color</td>
+                                <td>Industrial Black</td>
+                            </tr>
+                            <tr>
+                                <td>Mounting</td>
+                                <td>Integrated Neodymium Magnets (4× N52)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Sensors & Interface</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>Motion Sensor</td>
+                                <td>3-Axis Accelerometer (±16g range)</td>
+                            </tr>
+                            <tr>
+                                <td>Tamper Detection</td>
+                                <td>Drop/Removal Alert</td>
+                            </tr>
+                            <tr>
+                                <td>LED Indicators</td>
+                                <td>Blue (GNSS), Red (Network)</td>
+                            </tr>
+                            <tr>
+                                <td>SIM Type</td>
+                                <td>Nano-SIM (4FF)</td>
+                            </tr>
+                            <tr>
+                                <td>Configuration Port</td>
+                                <td>USB Type-C (Factory Use)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Network Panel -->
+                <div id="network-panel" class="spec-panel">
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Cellular Connectivity</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>Technology</td>
+                                <td>LTE Cat-M1, NB-IoT</td>
+                            </tr>
+                            <tr>
+                                <td>Frequency Bands</td>
+                                <td>B1/2/3/4/5/8/12/13/14/17/18/19/20/25/26/28/66</td>
+                            </tr>
+                            <tr>
+                                <td>Power Saving</td>
+                                <td>PSM, eDRX Support</td>
+                            </tr>
+                            <tr>
+                                <td>Data Rate</td>
+                                <td>375kbps DL / 375kbps UL</td>
+                            </tr>
+                            <tr>
+                                <td>Antenna Type</td>
+                                <td>Internal Ceramic</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Protocol Support</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>Data Protocol</td>
+                                <td>EELINK 2.0/2.1</td>
+                            </tr>
+                            <tr>
+                                <td>Transport Layer</td>
+                                <td>TCP/UDP, SMS</td>
+                            </tr>
+                            <tr>
+                                <td>Security</td>
+                                <td>TLS 1.2 Encryption</td>
+                            </tr>
+                            <tr>
+                                <td>OTA Updates</td>
+                                <td>FOTA Support</td>
+                            </tr>
+                            <tr>
+                                <td>Command Interface</td>
+                                <td>SMS, Platform API</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Positioning Panel -->
+                <div id="positioning-panel" class="spec-panel">
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">GNSS Performance</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>Constellations</td>
+                                <td>GPS, GLONASS, BeiDou</td>
+                            </tr>
+                            <tr>
+                                <td>Channels</td>
+                                <td>72 Channels</td>
+                            </tr>
+                            <tr>
+                                <td>Accuracy (Open Sky)</td>
+                                <td>2-5m CEP</td>
+                            </tr>
+                            <tr>
+                                <td>TTFF Cold Start</td>
+                                <td>~35 seconds</td>
+                            </tr>
+                            <tr>
+                                <td>TTFF Hot Start</td>
+                                <td>&lt;3 seconds</td>
+                            </tr>
+                            <tr>
+                                <td>Tracking Sensitivity</td>
+                                <td>-165 dBm</td>
+                            </tr>
+                            <tr>
+                                <td>Acquisition Sensitivity</td>
+                                <td>-148 dBm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Fallback Positioning</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>LBS Support</td>
+                                <td>Cell Tower Triangulation</td>
+                            </tr>
+                            <tr>
+                                <td>LBS Accuracy</td>
+                                <td>100-200m (Urban)</td>
+                            </tr>
+                            <tr>
+                                <td>AGPS</td>
+                                <td>Network Assisted</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Power Panel -->
+                <div id="power-panel" class="spec-panel">
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Battery Specifications</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>Type</td>
+                                <td>Li-MnO₂ Primary Cell</td>
+                            </tr>
+                            <tr>
+                                <td>Capacity</td>
+                                <td>8000mAh @ 3.0V</td>
+                            </tr>
+                            <tr>
+                                <td>Energy Density</td>
+                                <td>24Wh</td>
+                            </tr>
+                            <tr>
+                                <td>Self-Discharge</td>
+                                <td>&lt;1% per year</td>
+                            </tr>
+                            <tr>
+                                <td>Replacement</td>
+                                <td>Non-replaceable</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Power Consumption</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>Deep Sleep</td>
+                                <td>&lt;10μA</td>
+                            </tr>
+                            <tr>
+                                <td>Standby (PSM)</td>
+                                <td>15μA</td>
+                            </tr>
+                            <tr>
+                                <td>GNSS Active</td>
+                                <td>25mA</td>
+                            </tr>
+                            <tr>
+                                <td>LTE Transmit</td>
+                                <td>200mA peak</td>
+                            </tr>
+                            <tr>
+                                <td>Battery Life</td>
+                                <td>Up to 5 years (1 report/day)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Environmental Panel -->
+                <div id="environmental-panel" class="spec-panel">
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Operating Conditions</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>Operating Temperature</td>
+                                <td>-20°C to +65°C</td>
+                            </tr>
+                            <tr>
+                                <td>Storage Temperature</td>
+                                <td>-40°C to +85°C</td>
+                            </tr>
+                            <tr>
+                                <td>Humidity</td>
+                                <td>20% to 90% RH (non-condensing)</td>
+                            </tr>
+                            <tr>
+                                <td>Protection Rating</td>
+                                <td>IP65</td>
+                            </tr>
+                            <tr>
+                                <td>Shock Resistance</td>
+                                <td>IEC 60068-2-27</td>
+                            </tr>
+                            <tr>
+                                <td>Vibration Resistance</td>
+                                <td>IEC 60068-2-6</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Compliance Panel -->
+                <div id="compliance-panel" class="spec-panel">
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Regulatory Compliance</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>FCC</td>
+                                <td>Part 15 Class B</td>
+                            </tr>
+                            <tr>
+                                <td>IC</td>
+                                <td>RSS-247</td>
+                            </tr>
+                            <tr>
+                                <td>CE</td>
+                                <td>RED 2014/53/EU</td>
+                            </tr>
+                            <tr>
+                                <td>PTCRB</td>
+                                <td>Certified</td>
+                            </tr>
+                            <tr>
+                                <td>GCF</td>
+                                <td>Certified</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="spec-group">
+                        <h3 class="spec-group-title">Safety & Environmental</h3>
+                        <table class="spec-table">
+                            <tr>
+                                <td>RoHS</td>
+                                <td>2011/65/EU Compliant</td>
+                            </tr>
+                            <tr>
+                                <td>REACH</td>
+                                <td>Compliant</td>
+                            </tr>
+                            <tr>
+                                <td>UN38.3</td>
+                                <td>Transport Certified</td>
+                            </tr>
+                            <tr>
+                                <td>WEEE</td>
+                                <td>Registered</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Comparison -->
+        <div class="comparison-section">
+            <div class="comparison-header">
+                <h3 class="comparison-title">Product Comparison</h3>
+                <button class="btn btn-secondary" onclick="downloadComparison()">Download Full Comparison</button>
+            </div>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="highlight">GPT48-X</th>
+                            <th>GPT50</th>
+                            <th>GPT46</th>
+                            <th>Competitor Average</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Battery Life</td>
+                            <td class="highlight">5 Years</td>
+                            <td>10 Years</td>
+                            <td>2 Years</td>
+                            <td>1-2 Years</td>
+                        </tr>
+                        <tr>
+                            <td>Battery Capacity</td>
+                            <td class="highlight">8000mAh</td>
+                            <td>24000mAh</td>
+                            <td>5000mAh</td>
+                            <td>3000-5000mAh</td>
+                        </tr>
+                        <tr>
+                            <td>Network</td>
+                            <td class="highlight">LTE-M/NB-IoT</td>
+                            <td>LTE Cat-1/2G</td>
+                            <td>2G/3G</td>
+                            <td>LTE-M or 2G</td>
+                        </tr>
+                        <tr>
+                            <td>Size (mm)</td>
+                            <td class="highlight">101×60×25.5</td>
+                            <td>130×103×30</td>
+                            <td>95×55×22</td>
+                            <td>Variable</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td class="highlight">130g</td>
+                            <td>410g</td>
+                            <td>110g</td>
+                            <td>150-200g</td>
+                        </tr>
+                        <tr>
+                            <td>Temperature Sensor</td>
+                            <td class="highlight">No</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td>Light Sensor</td>
+                            <td class="highlight">No</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>IP Rating</td>
+                            <td class="highlight">IP65</td>
+                            <td>IP67</td>
+                            <td>IP54</td>
+                            <td>IP54-IP65</td>
+                        </tr>
+                        <tr>
+                            <td>GNSS Systems</td>
+                            <td class="highlight">GPS/GLONASS/BeiDou</td>
+                            <td>GPS/GLONASS/BeiDou/Galileo</td>
+                            <td>GPS/GLONASS</td>
+                            <td>GPS only</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operating Modes Section -->
+    <section id="modes" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Intelligent Operating Modes</h2>
+            <p class="section-subtitle">
+                Flexible tracking modes optimize battery life while meeting diverse operational requirements. 
+                Switch between modes remotely via SMS or platform commands.
+            </p>
+        </div>
+        
+        <div class="modes-container">
+            <div class="mode-card recommended">
+                <span class="recommended-badge">Recommended</span>
+                <h3 class="mode-title">Long Standby Mode</h3>
+                <p class="mode-description">
+                    Optimal for long-term asset monitoring with minimal battery consumption. 
+                    Perfect for containers, trailers, and stationary equipment.
+                </p>
+                <ul class="mode-features">
+                    <li>1 position report per day (configurable 1-365 days)</li>
+                    <li>Motion-activated wake-up with configurable sensitivity</li>
+                    <li>5-year battery life achievable</li>
+                    <li>SMS wake-up capability via eDRX</li>
+                    <li>Automatic alert on tampering or geo-fence breach</li>
+                    <li>Deep sleep current &lt;10μA</li>
+                </ul>
+            </div>
+            
+            <div class="mode-card">
+                <h3 class="mode-title">Emergency Mode</h3>
+                <p class="mode-description">
+                    Real-time tracking for critical situations such as theft recovery or high-value shipment monitoring. 
+                    Activated remotely or by alarm triggers.
+                </p>
+                <ul class="mode-features">
+                    <li>Continuous or interval tracking (30s to 5min)</li>
+                    <li>Remote activation via SMS or platform</li>
+                    <li>Auto-timeout to preserve battery (1-72 hours)</li>
+                    <li>Priority data transmission</li>
+                    <li>All sensors active for comprehensive monitoring</li>
+                    <li>Automatic fallback to standby mode</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section class="content-section" style="padding-top: 0;">
+        <div class="roi-calculator">
+            <h2 class="roi-title">Calculate Your ROI</h2>
+            <p class="roi-subtitle">Estimate your return on investment with GPT48-X deployment</p>
+            
+            <div class="calculator-grid">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label>Number of Assets to Track</label>
+                        <input type="number" id="num-assets" value="1000" min="1">
+                    </div>
+                    <div class="input-group">
+                        <label>Asset Type</label>
+                        <select id="asset-type">
+                            <option value="containers">Shipping Containers</option>
+                            <option value="trailers">Trailers</option>
+                            <option value="equipment">Construction Equipment</option>
+                            <option value="railcars">Rail Cars</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Average Asset Value ($)</label>
+                        <input type="number" id="asset-value" value="50000" min="1000">
+                    </div>
+                    <div class="input-group">
+                        <label>Current Annual Loss Rate (%)</label>
+                        <input type="number" id="loss-rate" value="2" min="0.1" max="100" step="0.1">
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="result-item">
+                        <div class="result-label">Annual Savings</div>
+                        <div class="result-value" id="annual-savings">$500,000</div>
+                        <div class="result-note">Based on 50% theft reduction</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">ROI Period</div>
+                        <div class="result-value" id="roi-period">4 Months</div>
+                        <div class="result-note">Time to positive return</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">5-Year Net Savings</div>
+                        <div class="result-value" id="total-savings">$2.4M</div>
+                        <div class="result-note">Including operational efficiencies</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 32px;">
+                <button class="btn btn-white btn-large" onclick="getDetailedROI()">
+                    Get Detailed ROI Report
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Industry Applications</h2>
+            <p class="section-subtitle">
+                Proven deployments across diverse industries with measurable operational improvements and ROI
+            </p>
+        </div>
+        
+        <div class="use-cases-grid">
+            <div class="use-case-card" onclick="viewCaseStudy('maritime')">
+                <div class="use-case-header">
+                    <div class="use-case-icon">🚢</div>
+                    <h3 class="use-case-title">Maritime Shipping</h3>
+                </div>
+                <div class="use-case-content">
+                    <p class="use-case-description">
+                        Track containers across transoceanic routes with complete visibility from port to destination. 
+                        Multi-year battery life covers entire lease cycles without maintenance.
+                    </p>
+                    <div class="use-case-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">40%</div>
+                            <div class="stat-label">Demurrage Reduction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">35%</div>
+                            <div class="stat-label">Asset Utilization</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-card" onclick="viewCaseStudy('fleet')">
+                <div class="use-case-header">
+                    <div class="use-case-icon">🚛</div>
+                    <h3 class="use-case-title">Fleet & Logistics</h3>
+                </div>
+                <div class="use-case-content">
+                    <p class="use-case-description">
+                        Monitor unpowered trailers and chassis without wiring. Magnetic mounting enables 
+                        quick deployment and redeployment across fleet assets.
+                    </p>
+                    <div class="use-case-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">25%</div>
+                            <div class="stat-label">Utilization Gain</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">95%</div>
+                            <div class="stat-label">Recovery Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-card" onclick="viewCaseStudy('construction')">
+                <div class="use-case-header">
+                    <div class="use-case-icon">🏗️</div>
+                    <h3 class="use-case-title">Construction</h3>
+                </div>
+                <div class="use-case-content">
+                    <p class="use-case-description">
+                        Secure high-value equipment with instant alerts for unauthorized movement. 
+                        Reduce theft and optimize equipment allocation across job sites.
+                    </p>
+                    <div class="use-case-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">60%</div>
+                            <div class="stat-label">Theft Reduction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">15%</div>
+                            <div class="stat-label">Insurance Savings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-card" onclick="viewCaseStudy('rail')">
+                <div class="use-case-header">
+                    <div class="use-case-icon">🚂</div>
+                    <h3 class="use-case-title">Rail Transport</h3>
+                </div>
+                <div class="use-case-content">
+                    <p class="use-case-description">
+                        Track railcars across continental networks with minimal infrastructure. 
+                        Optimize routing and reduce idle time with real-time visibility.
+                    </p>
+                    <div class="use-case-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">30%</div>
+                            <div class="stat-label">Idle Reduction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">22%</div>
+                            <div class="stat-label">On-time Delivery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-card" onclick="viewCaseStudy('supply-chain')">
+                <div class="use-case-header">
+                    <div class="use-case-icon">📦</div>
+                    <h3 class="use-case-title">Supply Chain</h3>
+                </div>
+                <div class="use-case-content">
+                    <p class="use-case-description">
+                        End-to-end visibility for high-value shipments with chain-of-custody verification. 
+                        Ensure compliance and reduce shrinkage across global supply chains.
+                    </p>
+                    <div class="use-case-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Visibility</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">45%</div>
+                            <div class="stat-label">Loss Prevention</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-card" onclick="viewCaseStudy('industrial')">
+                <div class="use-case-header">
+                    <div class="use-case-icon">🏭</div>
+                    <h3 class="use-case-title">Industrial Assets</h3>
+                </div>
+                <div class="use-case-content">
+                    <p class="use-case-description">
+                        Monitor remote infrastructure and mobile equipment with tamper detection. 
+                        Reduce maintenance costs with usage-based servicing.
+                    </p>
+                    <div class="use-case-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">20%</div>
+                            <div class="stat-label">Cost Reduction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Asset Recovery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section id="integration" class="content-section" style="background: var(--gray-50);">
+        <div class="section-header">
+            <h2 class="section-title">Integration & API</h2>
+            <p class="section-subtitle">
+                Seamless integration with existing enterprise systems through comprehensive APIs and protocols
+            </p>
+        </div>
+        
+        <div class="integration-tabs">
+            <button class="integration-tab active" data-tab="api">REST API</button>
+            <button class="integration-tab" data-tab="protocol">EELINK Protocol</button>
+            <button class="integration-tab" data-tab="platform">Platform Support</button>
+            <button class="integration-tab" data-tab="commands">SMS Commands</button>
+        </div>
+        
+        <div class="integration-content">
+            <div id="api-content" class="tab-content active">
+                <h3>RESTful API Integration</h3>
+                <p>Access device data and control functions through our comprehensive REST API.</p>
+                <div class="code-block">
+GET /api/v2/devices/{device_id}/location
+Authorization: Bearer {api_token}
+
+Response:
+{
+  "device_id": "GPT48X-001234",
+  "timestamp": "2024-01-15T10:30:00Z",
+  "location": {
+    "latitude": 37.7749,
+    "longitude": -122.4194,
+    "accuracy": 5,
+    "altitude": 52,
+    "speed": 0,
+    "heading": 0
+  },
+  "battery": 95,
+  "status": "active",
+  "sensors": {
+    "motion": false,
+    "tamper": false
+  }
+}
+                </div>
+            </div>
+            
+            <div id="protocol-content" class="tab-content">
+                <h3>EELINK Protocol 2.0/2.1</h3>
+                <p>Binary protocol for efficient data transmission over cellular networks.</p>
+                <div class="code-block">
+Protocol Format: 
+Header(2) + Length(2) + IMEI(15) + Command(2) + Data(N) + CRC(2)
+
+Example Location Packet:
+78 78 25 12 0F 0A 1D 02 33 05 09 3C 57 08 CC 66 00 1B 00 00 01 CC 00 26 7B 00 14 84 0D 0A
+
+Decoded:
+- Header: 0x7878
+- IMEI: 123456789012345
+- Location: 37.7749, -122.4194
+- Battery: 95%
+- Status: 0x00 (Normal)
+                </div>
+            </div>
+            
+            <div id="platform-content" class="tab-content">
+                <h3>Platform Integration</h3>
+                <p>Compatible with major fleet management and IoT platforms.</p>
+                <ul style="line-height: 2; margin-top: 20px;">
+                    <li>✓ Eelink Cloud Platform (Keelin)</li>
+                    <li>✓ Traccar Server (Open Source)</li>
+                    <li>✓ Gurtam Wialon</li>
+                    <li>✓ Navixy</li>
+                    <li>✓ Flespi</li>
+                    <li>✓ ThingsBoard</li>
+                    <li>✓ AWS IoT Core</li>
+                    <li>✓ Azure IoT Hub</li>
+                    <li>✓ Custom Enterprise Platforms via API</li>
+                </ul>
+            </div>
+            
+            <div id="commands-content" class="tab-content">
+                <h3>SMS Command Reference</h3>
+                <p>Configure and control devices remotely via SMS commands.</p>
+                <div class="code-block">
+# Location Query
+WHERE#                          // Request current location
+URL#                           // Get Google Maps link
+
+# Configuration
+APN,internet#                  // Set APN
+SERVER,1,api.eelink.com,8001# // Set server address
+TIMER,86400#                   // Set report interval (seconds)
+
+# Mode Control
+MODE,STANDBY#                  // Enter standby mode
+MODE,EMERGENCY,3600#           // Emergency mode for 1 hour
+
+# Status
+STATUS#                        // Check device status
+PARAM#                         // Query all parameters
+VERSION#                       // Firmware version
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Technical Resources</h2>
+            <p class="section-subtitle">
+                Comprehensive documentation and tools for successful deployment and integration
+            </p>
+        </div>
+        
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-icon">📄</div>
+                <h4 class="resource-title">Datasheet</h4>
+                <p class="resource-info">PDF • 2.4 MB • v3.2</p>
+                <button class="btn btn-secondary" onclick="downloadResource('datasheet')">Download</button>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">📘</div>
+                <h4 class="resource-title">User Manual</h4>
+                <p class="resource-info">PDF • 8.1 MB • v3.0</p>
+                <button class="btn btn-secondary" onclick="downloadResource('manual')">Download</button>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">🔧</div>
+                <h4 class="resource-title">API Documentation</h4>
+                <p class="resource-info">Online • Latest</p>
+                <button class="btn btn-secondary" onclick="openResource('api-docs')">Access</button>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">🎓</div>
+                <h4 class="resource-title">Integration Guide</h4>
+                <p class="resource-info">PDF • 3.7 MB • v2.8</p>
+                <button class="btn btn-secondary" onclick="downloadResource('integration')">Download</button>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">📊</div>
+                <h4 class="resource-title">Case Studies</h4>
+                <p class="resource-info">PDF • 5.2 MB • 2024</p>
+                <button class="btn btn-secondary" onclick="downloadResource('cases')">Download</button>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">🛡️</div>
+                <h4 class="resource-title">Certifications</h4>
+                <p class="resource-info">ZIP • 12.3 MB</p>
+                <button class="btn btn-secondary" onclick="downloadResource('certs')">Download</button>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">💻</div>
+                <h4 class="resource-title">Firmware</h4>
+                <p class="resource-info">v2.4.1 • 1.8 MB</p>
+                <button class="btn btn-secondary" onclick="downloadResource('firmware')">Download</button>
+            </div>
+            
+            <div class="resource-card">
+                <div class="resource-icon">🎥</div>
+                <h4 class="resource-title">Video Tutorials</h4>
+                <p class="resource-info">8 Videos • 45 min</p>
+                <button class="btn btn-secondary" onclick="openResource('videos')">Watch</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="content-section" style="background: var(--gray-50);">
+        <div class="section-header">
+            <h2 class="section-title">Enterprise Support & Services</h2>
+            <p class="section-subtitle">
+                Comprehensive support options to ensure successful deployment and operation
+            </p>
+        </div>
+        
+        <div class="support-options">
+            <div class="support-card">
+                <div class="support-icon">📞</div>
+                <h4 class="support-title">24/7 Technical Support</h4>
+                <p class="support-info">
+                    Enterprise hotline with priority response<br>
+                    +1-888-EELINK (334-5465)
+                </p>
+            </div>
+            
+            <div class="support-card">
+                <div class="support-icon">💬</div>
+                <h4 class="support-title">Live Chat</h4>
+                <p class="support-info">
+                    Instant technical assistance<br>
+                    Mon-Fri 9AM-6PM EST
+                </p>
+            </div>
+            
+            <div class="support-card">
+                <div class="support-icon">📧</div>
+                <h4 class="support-title">Email Support</h4>
+                <p class="support-info">
+                    support@eelink.com<br>
+                    Response within 24 hours
+                </p>
+            </div>
+            
+            <div class="support-card">
+                <div class="support-icon">🎓</div>
+                <h4 class="support-title">Professional Training</h4>
+                <p class="support-info">
+                    Online & on-site training<br>
+                    Certification available
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How long does the battery really last?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    The GPT48-X achieves up to 5 years of battery life with one position report per day in Long Standby Mode. 
+                    Actual battery life depends on reporting frequency, network conditions, temperature, and usage of Emergency Mode. 
+                    In typical deployments with daily reporting and good network coverage, customers regularly achieve 3-5 years of operation.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Which countries and networks are supported?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    The GPT48-X supports LTE-M and NB-IoT networks across 17 frequency bands, providing coverage in over 180 countries. 
+                    Major supported regions include North America, Europe, Asia-Pacific, and Latin America. 
+                    The device automatically selects the best available network. Check with your local carrier for specific LTE-M/NB-IoT availability.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can the battery be replaced?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    The GPT48-X uses a non-rechargeable primary lithium battery that is not user-replaceable. 
+                    This design ensures IP65 water resistance and eliminates maintenance requirements during the device's operational life. 
+                    When the battery is depleted after several years, the entire unit should be replaced. Volume customers may inquire about refurbishment programs.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the minimum order quantity?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    For enterprise customers, we offer flexible ordering options starting from pilot deployments of 10 units. 
+                    Volume pricing tiers are available at 100, 500, 1000, and 5000+ units. 
+                    Contact our sales team for custom pricing on large deployments and multi-year contracts.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How accurate is the GPS tracking?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    The GPT48-X achieves 2-5 meter accuracy in open sky conditions using multi-constellation GNSS (GPS, GLONASS, BeiDou). 
+                    In challenging environments like urban canyons or under light cover, accuracy may decrease to 10-15 meters. 
+                    When GNSS is unavailable, the device falls back to LBS positioning with 100-200 meter accuracy in urban areas.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What integration options are available?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    The GPT48-X offers multiple integration options: REST API for custom platforms, EELINK Protocol 2.0/2.1 for direct integration, 
+                    compatibility with major fleet management platforms (Wialon, Navixy, Traccar), and webhook support for event notifications. 
+                    Our professional services team can assist with custom integrations for enterprise deployments.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="content-section" style="background: var(--gray-50);">
+        <div class="section-header">
+            <h2 class="section-title">Related Products</h2>
+            <p class="section-subtitle">Explore our complete range of industrial tracking solutions</p>
+        </div>
+        
+        <div class="related-products">
+            <div class="related-product-card" onclick="viewProduct('GPT50')">
+                <div class="related-product-image"></div>
+                <h4 class="related-product-name">GPT50</h4>
+                <p class="related-product-desc">10-year battery • Temperature sensor • Light sensor</p>
+            </div>
+            
+            <div class="related-product-card" onclick="viewProduct('GPT46')">
+                <div class="related-product-image"></div>
+                <h4 class="related-product-name">GPT46</h4>
+                <p class="related-product-desc">2-year battery • 2G/3G fallback • Budget-friendly</p>
+            </div>
+            
+            <div class="related-product-card" onclick="viewProduct('TK419')">
+                <div class="related-product-image"></div>
+                <h4 class="related-product-name">TK419</h4>
+                <p class="related-product-desc">Wired installation • Real-time tracking • Vehicle power</p>
+            </div>
+            
+            <div class="related-product-card" onclick="viewProduct('GPT29')">
+                <div class="related-product-image"></div>
+                <h4 class="related-product-name">GPT29</h4>
+                <p class="related-product-desc">Solar powered • Unlimited operation • Outdoor assets</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Deploy Enterprise Asset Intelligence?</h2>
+            <p class="cta-subtitle">
+                Join 10,000+ companies worldwide using Eelink trackers to optimize operations
+            </p>
+            <div class="cta-buttons">
+                <button class="btn btn-white btn-large" onclick="contactSales()">Contact Sales Team</button>
+                <button class="btn btn-white btn-large" onclick="requestQuote()">Request Custom Quote</button>
+                <button class="btn btn-white btn-large" onclick="scheduleDemo()">Schedule Technical Demo</button>
+            </div>
+            <p style="margin-top: 24px; font-size: 14px; opacity: 0.9;">
+                Or call us directly: +1-888-EELINK (334-5465) • Available 24/7
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>EELINK Technology</h3>
+                    <p class="footer-description">
+                        Global leader in industrial IoT tracking solutions since 2004. 
+                        Headquartered in Shenzhen, China with offices in USA, Germany, and Singapore.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">in</a>
+                        <a href="#" class="social-link">tw</a>
+                        <a href="#" class="social-link">yt</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Asset Trackers</a></li>
+                        <li><a href="#">Vehicle Trackers</a></li>
+                        <li><a href="#">Personal Trackers</a></li>
+                        <li><a href="#">OBD Trackers</a></li>
+                        <li><a href="#">Platform Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Fleet Management</a></li>
+                        <li><a href="#">Supply Chain</a></li>
+                        <li><a href="#">Cold Chain</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Government</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">Training Center</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 Eelink Communication Technology Co., Ltd. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Legal Notice</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Product Navigation Tabs
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active from all tabs
+                    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Smooth scroll to section
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        const offset = 144; // Account for sticky headers
+                        const elementPosition = targetSection.offsetTop - offset;
+                        window.scrollTo({
+                            top: elementPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Specification Category Buttons
+            document.querySelectorAll('.spec-category-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active from all buttons and panels
+                    document.querySelectorAll('.spec-category-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.spec-panel').forEach(p => p.classList.remove('active'));
+                    
+                    // Add active to clicked button
+                    this.classList.add('active');
+                    
+                    // Show corresponding panel
+                    const panelId = this.getAttribute('data-panel') + '-panel';
+                    const panel = document.getElementById(panelId);
+                    if (panel) {
+                        panel.classList.add('active');
+                    }
+                });
+            });
+            
+            // Integration Tabs
+            document.querySelectorAll('.integration-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active from all tabs
+                    document.querySelectorAll('.integration-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Hide all content
+                    document.querySelectorAll('.tab-content').forEach(c => {
+                        c.classList.remove('active');
+                    });
+                    
+                    // Show selected content
+                    const contentId = this.getAttribute('data-tab') + '-content';
+                    const content = document.getElementById(contentId);
+                    if (content) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+            
+            // FAQ Accordion
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const arrow = this.querySelector('.faq-arrow');
+                    
+                    // Toggle active state
+                    this.classList.toggle('active');
+                    answer.classList.toggle('active');
+                    
+                    // Rotate arrow
+                    if (answer.classList.contains('active')) {
+                        arrow.style.transform = 'rotate(180deg)';
+                    } else {
+                        arrow.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+            
+            // ROI Calculator
+            function calculateROI() {
+                const numAssets = parseInt(document.getElementById('num-assets').value) || 1000;
+                const assetValue = parseInt(document.getElementById('asset-value').value) || 50000;
+                const lossRate = parseFloat(document.getElementById('loss-rate').value) || 2;
+                
+                // Calculate savings
+                const annualLoss = (numAssets * assetValue * lossRate / 100);
+                const annualSavings = annualLoss * 0.5; // 50% reduction
+                const trackerCost = numAssets * 150; // Estimated cost per unit
+                const roiMonths = Math.ceil(trackerCost / (annualSavings / 12));
+                const fiveYearSavings = (annualSavings * 5) - trackerCost;
+                
+                // Update display
+                // Prefix monetary values with a dollar sign and format numbers for readability. The previous implementation
+                // concatenated strings incorrectly and omitted the currency symbol which caused JavaScript syntax errors.
+                document.getElementById('annual-savings').textContent = '$' + annualSavings.toLocaleString();
+                document.getElementById('roi-period').textContent = roiMonths + ' Months';
+                document.getElementById('total-savings').textContent = '$' + (fiveYearSavings / 1000000).toFixed(1) + 'M';
+            }
+            
+            // Attach ROI calculator listeners
+            ['num-assets', 'asset-value', 'loss-rate'].forEach(id => {
+                const input = document.getElementById(id);
+                if (input) {
+                    input.addEventListener('input', calculateROI);
+                    input.addEventListener('change', calculateROI);
+                }
+            });
+            
+            // Asset type selector
+            document.getElementById('asset-type').addEventListener('change', function() {
+                const values = {
+                    'containers': { value: 50000, loss: 2 },
+                    'trailers': { value: 35000, loss: 3 },
+                    'equipment': { value: 75000, loss: 5 },
+                    'railcars': { value: 100000, loss: 1 }
+                };
+                
+                const selected = values[this.value];
+                if (selected) {
+                    document.getElementById('asset-value').value = selected.value;
+                    document.getElementById('loss-rate').value = selected.loss;
+                    calculateROI();
+                }
+            });
+            
+            // Initialize ROI calculation
+            calculateROI();
+        });
+        
+        // Product Image Gallery
+        function changeImage(index) {
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.thumbnail')[index].classList.add('active');
+            document.getElementById('mainImage').textContent = 'Product Image ' + (index + 1);
+        }
+        
+        // Action Functions
+        function requestQuote() {
+            alert('Quote request submitted. Our sales team will contact you within 24 hours.');
+        }
+        
+        function contactSales() {
+            alert('Connecting to sales team... You can also call +1-888-EELINK');
+        }
+        
+        function downloadDatasheet() {
+            alert('Downloading GPT48-X datasheet (PDF, 2.4MB)...');
+        }
+        
+        function scheduleDemo() {
+            alert('Opening calendar to schedule technical demonstration...');
+        }
+        
+        function downloadComparison() {
+            alert('Downloading complete comparison chart...');
+        }
+        
+        function getDetailedROI() {
+            alert('Generating detailed ROI report based on your inputs...');
+        }
+        
+        function viewCaseStudy(industry) {
+            alert('Opening ' + industry + ' industry case study...');
+        }
+        
+        function downloadResource(type) {
+            alert('Downloading ' + type + '...');
+        }
+        
+        function openResource(type) {
+            alert('Opening ' + type + ' in new window...');
+        }
+        
+        function viewProduct(model) {
+            alert('Navigating to ' + model + ' product page...');
+        }
+    </script>
+</body>
+</html>
